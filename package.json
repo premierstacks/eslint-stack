@@ -1,0 +1,50 @@
+{
+  "name": "@tomchochola/eslint-config",
+  "description": "eslint config",
+  "keywords": [
+    "tomchochola",
+    "eslint-config"
+  ],
+  "homepage": "https://github.com/tomchochola/eslint-config",
+  "bugs": {
+    "email": "chocholatom1997@gmail.com",
+    "url": "https://github.com/tomchochola/eslint-config/issues"
+  },
+  "license": "SEE LICENSE IN ./LICENSE.md",
+  "author": {
+    "email": "chocholatom1997@gmail.com",
+    "name": "Tomáš Chochola",
+    "url": "https://github.com/tomchochola"
+  },
+  "contributors": [
+    {
+      "email": "chocholatom1997@gmail.com",
+      "name": "Tomáš Chochola",
+      "url": "https://github.com/tomchochola"
+    }
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/tomchochola"
+  },
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomchochola/eslint-config.git"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-jsx-a11y": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest"
+  },
+  "devDependencies": {
+    "@tomchochola/prettier-config": "github:tomchochola/prettier-config"
+  },
+  "private": true,
+  "type": "module"
+}
