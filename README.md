@@ -1,8 +1,10 @@
-# ⚙️ [Eslint Config](https://github.com/tomchochola/eslint-config) by [Tomáš Chochola](https://github.com/tomchochola)
+# [ESLint Config](https://github.com/tomchochola/eslint-config) by [Tomáš Chochola](https://github.com/tomchochola)
 
-Elevate your coding with **[@tomchochola/eslint-config](https://github.com/tomchochola/eslint-config)**, the ultimate ESLint library that harnesses the full power of the latest ESLint capabilities, including the revolutionary flat config system. Designed to optimize your setup and enforce coding excellence, it's your gateway to next-level coding practices.
+A premium collection of ESLint configurations, featuring the latest enhancements and a flat config system, designed for optimal code quality in browser, React, Node.js, and TypeScript environments.
 
 ## 🛡️ License & Usage
+
+[![License](https://img.shields.io/badge/License-Proprietary-blue.svg)](https://github.com/sponsors/tomchochola)
 
 This library is the exclusive property of [Tomáš Chochola](https://github.com/tomchochola), protected under copyright law. Utilization of this software, in any form, is subject to a valid license agreement, obtainable via one-time payment or subscription at [Tomáš Chochola's GitHub Sponsors page](https://github.com/sponsors/tomchochola).
 
@@ -70,8 +72,6 @@ export default [...configs.ignores(), ...configs.node(), ...configs.configs()];
 ./node_modules/.bin/eslint .
 ```
 
-And that's it! You're ready to enjoy the full benefits of **[@tomchochola/eslint-config](@tomchochola/eslint-config)**.
-
 ## 🤵 Meet Tomáš Chochola
 
 Behind this library is [Tomáš Chochola](https://github.com/tomchochola), a developer with a zeal for clean, efficient code and seamless workflows. Tomáš's commitment to software excellence is evident in every aspect of this project. Dive into a community that values quality and support future innovations by [sponsoring Tomáš Chochola](https://github.com/sponsors/tomchochola).
@@ -82,4 +82,4 @@ Behind this library is [Tomáš Chochola](https://github.com/tomchochola), a dev
 
 ## 🌈 Join the Journey
 
-Ready to revolutionize your ESLint experience? [🌟 Get Started](#🌟-get-started) now and elevate your code. For updates, contributions, or questions, engage with us on GitHub. Let's shape the future of clean coding together!
+Ready to revolutionize your ESLint experience? Get started now and elevate your code. For updates, contributions, or questions, engage with us on GitHub. Let's shape the future of clean coding together!
