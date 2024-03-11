@@ -15,10 +15,10 @@
  * - Sponsor & License: https://github.com/sponsors/tomchochola
  */
 
-export { default as reactTs } from './react_ts.js';
-export { default as browser } from './browser.js';
-export { default as browserTs } from './browser_ts.js';
-export { default as node } from './node.js';
-export { default as nodeTs } from './node_ts.js';
-export { default as configs } from './configs.js';
-export { default as ignores } from './ignores.js';
+export default function () {
+  return [
+    {
+      ignores: ['.phpunit.cache', '.phpunit.coverage', 'vendor', '**/.DS_Store', '**/.idea', '**/.vscode', '**/.fleet', 'dist', 'build', 'storage'],
+    },
+  ];
+}
