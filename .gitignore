@@ -7,3 +7,25 @@
 # node
 /node_modules
 /package-lock.json
+
+# composer
+/vendor
+/composer.lock
+
+# phpunit
+/.phpunit.result.cache
+/.phpunit.cache
+/.phpunit.coverage
+
+# php-cs-fixer
+/.php-cs-fixer.cache
+
+# vendor
+/public/vendor
+/static/vendor
+/resources/vendor
+/assets/vendor
+
+# compiled files
+/dist
+/build

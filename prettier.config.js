@@ -1,16 +1,17 @@
 /**
- * Copyright © 2024+ [Tomáš Chochola](https://github.com/tomchochola) <chocholatom1997@gmail.com>
+ * Copyright © 2024+ Tomáš Chochola <chocholatom1997@gmail.com> - All Rights Reserved
  *
- * This file is part of proprietary software developed by Tomáš Chochola. Despite potential public availability,
- * this software is not free or open-source. A license is required for any form of use.
+ * This software is the exclusive property of Tomáš Chochola, protected by copyright laws.
+ * Although the source code may be accessible, it is not free for use without a valid license.
+ * A valid license, obtainable through proper channels, is required for any software use.
+ * For licensing or inquiries, please contact Tomáš Chochola or refer to the GitHub Sponsors page.
  *
- * For licensing inquiries or to obtain a license, please contact Tomáš Chochola directly or visit:
- * GitHub Sponsors page: https://github.com/sponsors/tomchochola
+ * The full license terms are detailed in the LICENSE.md file within the source code repository.
+ * The terms are subject to changes. Users are encouraged to review them periodically.
  *
- * The full terms and conditions of the license are outlined in the LICENSE.md file accompanying the source code.
- *
- * Stay updated and support the development:
- * - Email: <chocholatom1997@gmail.com>
+ * The Proprietor: Tomáš Chochola
+ * - Role: The Creator, Proprietor & Project Visionary
+ * - Email: chocholatom1997@gmail.com
  * - GitHub: https://github.com/tomchochola
  * - Sponsor & License: https://github.com/sponsors/tomchochola
  */

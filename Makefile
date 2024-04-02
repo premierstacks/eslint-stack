@@ -41,10 +41,10 @@ testing: local
 
 .PHONY: development
 development: testing
-	npm install --install-links --include prod --omit dev --include peer --include optional
 
 .PHONY: staging
-staging: development
+staging:
+	npm install --install-links --include prod --omit dev --include peer --include optional
 
 .PHONY: production
 production: staging
