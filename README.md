@@ -1,4 +1,4 @@
-# [ESLint Config](https://github.com/tomchochola/eslint-config) by [Tomáš Chochola](https://github.com/tomchochola)
+# [ESLint Config](https://github.com/premierstacks/eslint-config) by [Tomáš Chochola](https://github.com/tomchochola)
 
 Streamline ESLint in your projects: our package integrates the latest standards and best practices for browser, React, Node.js, and TypeScript in just a few steps. Now built using the new ESLint flat config system for even more streamlined integration.
 
@@ -84,7 +84,7 @@ Secure your license at [Tomáš Chochola's GitHub Sponsors page](https://github.
 ### 2️⃣ Package Installation
 
 ```shell
-npm install --save-dev github:tomchochola/eslint-config
+npm install --save-dev github:premierstacks/eslint-config
 ```
 
 ### 3️⃣ Configuration
@@ -92,7 +92,7 @@ npm install --save-dev github:tomchochola/eslint-config
 Initialize your `eslint.config.js`:
 
 ```js
-import { configs } from '@tomchochola/eslint-config';
+import { configs } from '@premierstacks/eslint-config';
 
 export default [...configs.ignores(), ...configs.browser(), ...configs.configs()];
 ```

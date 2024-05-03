@@ -1,14 +1,14 @@
 {
-  "name": "@tomchochola/eslint-config",
+  "name": "@premierstacks/eslint-config",
   "description": "eslint config",
   "keywords": [
-    "tomchochola",
+    "premierstacks",
     "eslint-config"
   ],
-  "homepage": "https://github.com/tomchochola/eslint-config",
+  "homepage": "https://github.com/premierstacks/eslint-config",
   "bugs": {
     "email": "chocholatom1997@gmail.com",
-    "url": "https://github.com/tomchochola/eslint-config/issues"
+    "url": "https://github.com/premierstacks/eslint-config/issues"
   },
   "license": "SEE LICENSE IN ./LICENSE.md",
   "author": {
@@ -30,7 +30,7 @@
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomchochola/eslint-config.git"
+    "url": "https://github.com/premierstacks/eslint-config.git"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.1.1",
@@ -43,7 +43,7 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "devDependencies": {
-    "@tomchochola/prettier-config": "github:tomchochola/prettier-config"
+    "@premierstacks/prettier-config": "github:premierstacks/prettier-config"
   },
   "private": true,
   "type": "module"
