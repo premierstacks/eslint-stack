@@ -18,28 +18,30 @@
  * - GitHub: https://github.com/premierstacks
  */
 
-export default function () {
+const BASE = [
+  '**/.DS_Store',
+  '**/.idea',
+  '**/.vscode',
+  '**/.fleet',
+  'node_modules',
+  'vendor',
+  '.phpunit.result.cache',
+  '.phpunit.cache',
+  '.phpunit.coverage',
+  '.php-cs-fixer.cache',
+  'public/vendor',
+  'static/vendor',
+  'resources/vendor',
+  'assets/vendor',
+  'dist',
+  'build',
+  'storage',
+];
+
+export default function (merge = [], base = BASE) {
   return [
     {
-      ignores: [
-        '**/.DS_Store',
-        '**/.idea',
-        '**/.vscode',
-        '**/.fleet',
-        'node_modules',
-        'vendor',
-        '.phpunit.result.cache',
-        '.phpunit.cache',
-        '.phpunit.coverage',
-        '.php-cs-fixer.cache',
-        'public/vendor',
-        'static/vendor',
-        'resources/vendor',
-        'assets/vendor',
-        'dist',
-        'build',
-        'storage',
-      ],
+      ignores: [...base, ...merge],
     },
   ];
 }
