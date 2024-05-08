@@ -3,7 +3,8 @@
   "description": "eslint config",
   "keywords": [
     "premierstacks",
-    "eslint-config"
+    "eslint-config",
+    "tomchochola"
   ],
   "homepage": "https://github.com/premierstacks/eslint-config",
   "bugs": {
