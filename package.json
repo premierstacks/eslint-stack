@@ -1,15 +1,15 @@
 {
-  "name": "@premierstacks/eslint-config",
-  "description": "eslint config",
+  "name": "@premierstacks/eslint-stack",
+  "description": "eslint stack",
   "keywords": [
     "premierstacks",
-    "eslint-config",
+    "eslint-stack",
     "tomchochola"
   ],
-  "homepage": "https://github.com/premierstacks/eslint-config",
+  "homepage": "https://github.com/premierstacks/eslint-stack",
   "bugs": {
     "email": "chocholatom1997@gmail.com",
-    "url": "https://github.com/premierstacks/eslint-config/issues"
+    "url": "https://github.com/premierstacks/eslint-stack/issues"
   },
   "license": "SEE LICENSE IN ./LICENSE.md",
   "author": {
@@ -31,7 +31,7 @@
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/premierstacks/eslint-config.git"
+    "url": "https://github.com/premierstacks/eslint-stack.git"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.8",
@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "^4.6"
   },
   "devDependencies": {
-    "@premierstacks/prettier-config": "github:premierstacks/prettier-config"
+    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack"
   },
   "private": true,
   "type": "module"

@@ -1,20 +1,20 @@
-# [ESLint Config](https://github.com/premierstacks/eslint-config) by [Tomáš Chochola](https://github.com/tomchochola)
+# [ESLint Stack](https://github.com/premierstacks/eslint-stack) by [Tomáš Chochola](https://github.com/tomchochola)
 
 Streamline ESLint in your projects: our package integrates the latest standards and best practices for browser, React, Node.js, and TypeScript in just a few steps. Now built using the new ESLint flat config system for even more streamlined integration.
 
-Dive into your projects with our ESLint Config, designed to cut through the complexity of setting up ESLint. We've distilled the process into a straightforward approach that gets you up and running quickly. Our package consolidates the latest ESLint features and coding best practices, tailored for various development environments including browser, React, Node.js, and TypeScript. This means less time spent on setup and more on coding, with the assurance of premium quality standards. Ideal for developers seeking an efficient and effective way to enforce code quality.
+Dive into your projects with our ESLint Stack, designed to cut through the complexity of setting up ESLint. We've distilled the process into a straightforward approach that gets you up and running quickly. Our package consolidates the latest ESLint features and coding best practices, tailored for various development environments including browser, React, Node.js, and TypeScript. This means less time spent on setup and more on coding, with the assurance of premium quality standards. Ideal for developers seeking an efficient and effective way to enforce code quality.
 
-## 👌 Top Reasons to Opt for Our Premium ESLint Config
+## 👌 Top Reasons to Opt for Our Premium ESLint ConfStackig
 
-By incorporating our Premium ESLint Config into your development toolkit, you not only enhance the quality and consistency of your code but also adopt a strategic asset that sets your projects apart in the realm of software development, ensuring maintainability, scalability, and compliance with best practices.
+By incorporating our Premium ESLint Stack into your development toolkit, you not only enhance the quality and consistency of your code but also adopt a strategic asset that sets your projects apart in the realm of software development, ensuring maintainability, scalability, and compliance with best practices.
 
 ### ⏱️ Setup in Just 5 Minutes
 
-Begin your projects with confidence using our premium ESLint Config, designed for quick and seamless integration. This configuration ensures your development environment is aligned with the latest standards in code quality, enabling you to focus on writing exceptional code from the start.
+Begin your projects with confidence using our premium ESLint Stack, designed for quick and seamless integration. This configuration ensures your development environment is aligned with the latest standards in code quality, enabling you to focus on writing exceptional code from the start.
 
 ### 🕒 Hundreds of Hours of Research, So You Don't Have To
 
-Our ESLint Config is the product of extensive research and practical experience, encapsulating the best practices and latest enhancements in coding standards. By choosing our configuration, you leverage years of expertise, ensuring your projects adhere to the highest quality standards without the need for exhaustive research.
+Our ESLint Stack is the product of extensive research and practical experience, encapsulating the best practices and latest enhancements in coding standards. By choosing our configuration, you leverage years of expertise, ensuring your projects adhere to the highest quality standards without the need for exhaustive research.
 
 ### 🎚️ Minimal Setup, Maximum Code Quality
 
@@ -26,15 +26,15 @@ Regardless of your experience level with ESLint or code quality tools, our confi
 
 ### 🔄 Continuously Updated
 
-Stay at the forefront of coding standards with a configuration that evolves. Our ESLint Config is regularly updated to incorporate the latest ESLint features and best practices, keeping your projects modern and compliant with evolving development standards.
+Stay at the forefront of coding standards with a configuration that evolves. Our ESLint Stack is regularly updated to incorporate the latest ESLint features and best practices, keeping your projects modern and compliant with evolving development standards.
 
 ### ⚔️ Battle-Tested Reliability
 
-Depend on an ESLint Config that has been rigorously tested across a wide range of development scenarios. From small-scale applications to large enterprise projects, our configuration delivers consistent, reliable results, enhancing the maintainability and quality of your code.
+Depend on an ESLint Stack that has been rigorously tested across a wide range of development scenarios. From small-scale applications to large enterprise projects, our configuration delivers consistent, reliable results, enhancing the maintainability and quality of your code.
 
 ### 🏆 Premier Quality Guarantee
 
-Opting for our ESLint Config signifies a commitment to coding excellence. This tool is more than just a set of linting rules; it's a comprehensive solution that elevates your projects' code quality, reflecting the highest standards in software development.
+Opting for our ESLint Stack signifies a commitment to coding excellence. This tool is more than just a set of linting rules; it's a comprehensive solution that elevates your projects' code quality, reflecting the highest standards in software development.
 
 ## 🛡️ License & Usage
 
@@ -84,7 +84,7 @@ Secure your license at [Tomáš Chochola's GitHub Sponsors page](https://github.
 ### 2️⃣ Package Installation
 
 ```shell
-npm install --save-dev github:premierstacks/eslint-config
+npm install --save-dev github:premierstacks/eslint-stack
 ```
 
 ### 3️⃣ Configuration
@@ -92,7 +92,7 @@ npm install --save-dev github:premierstacks/eslint-config
 Initialize your `eslint.config.js`:
 
 ```js
-import { configs } from '@premierstacks/eslint-config';
+import { configs } from '@premierstacks/eslint-stack';
 
 export default [...configs.ignores(), ...configs.browser(), ...configs.configs()];
 ```
