@@ -34,17 +34,18 @@
     "url": "https://github.com/premierstacks/eslint-stack.git"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.8",
-    "@typescript-eslint/parser": "^7.8",
+    "@typescript-eslint/eslint-plugin": "^8.5",
+    "@typescript-eslint/parser": "^8.5",
     "eslint": "^8.57",
     "eslint-config-prettier": "^9.1",
-    "eslint-plugin-jsx-a11y": "^6.8",
-    "eslint-plugin-prettier": "^5.1",
-    "eslint-plugin-react": "^7.34",
+    "eslint-plugin-jsx-a11y": "^6.10",
+    "eslint-plugin-prettier": "^5.2",
+    "eslint-plugin-react": "^7.35",
     "eslint-plugin-react-hooks": "^4.6"
   },
   "devDependencies": {
-    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack"
+    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack",
+    "@premierstacks/typescript-stack": "github:premierstacks/typescript-stack"
   },
   "private": true,
   "type": "module"

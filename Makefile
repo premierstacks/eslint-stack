@@ -6,11 +6,15 @@ SHELL := /bin/bash
 
 # Goals
 .PHONY: check
-check: lint audit
+check: lint stan audit
 
 .PHONY: audit
 audit: ./node_modules ./package-lock.json
 	npm audit --audit-level info --include prod --include dev --include peer --include optional
+
+.PHONY: stan
+stan: ./node_modules/.bin/tsc
+	./node_modules/.bin/tsc --noEmit
 
 .PHONY: lint
 lint: ./node_modules/.bin/prettier ./node_modules/.bin/eslint
@@ -49,5 +53,5 @@ staging: development
 production: staging
 
 # Dependencies
-./node_modules ./package-lock.json ./node_modules/.bin/prettier ./node_modules/.bin/eslint:
+./node_modules ./package-lock.json ./node_modules/.bin/prettier ./node_modules/.bin/eslint ./node_modules/.bin/tsc:
 	npm install --install-links --include prod --include dev --include peer --include optional

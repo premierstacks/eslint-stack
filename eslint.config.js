@@ -19,4 +19,4 @@
 
 import { configs } from './src/index.js';
 
-export default [...configs.ignores(), ...configs.node(), ...configs.configs()];
+export default [...configs.ignores(), ...configs.nodeTs(), ...configs.configs()];
