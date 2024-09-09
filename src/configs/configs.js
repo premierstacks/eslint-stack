@@ -22,7 +22,7 @@ import js from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 
-export function configs(ecmaVersion = 2021, env = { ...globals.node, ...globals.es2021 }) {
+function configs(ecmaVersion = 2021, env = { ...globals.node, ...globals.es2021 }) {
   return [
     {
       files: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
@@ -68,3 +68,5 @@ export function configs(ecmaVersion = 2021, env = { ...globals.node, ...globals.
     },
   ];
 }
+
+export { configs };

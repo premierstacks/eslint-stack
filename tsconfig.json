@@ -1,7 +1,0 @@
-{
-  "extends": "@premierstacks/typescript-stack/src/configs/recommended.json",
-  "include": ["./src/**/*"],
-  "compilerOptions": {
-    "outDir": "./dist"
-  }
-}

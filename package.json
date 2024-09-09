@@ -44,8 +44,7 @@
     "eslint-plugin-react-hooks": "^4.6"
   },
   "devDependencies": {
-    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack",
-    "@premierstacks/typescript-stack": "github:premierstacks/typescript-stack"
+    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack"
   },
   "private": true,
   "type": "module"

@@ -27,7 +27,7 @@ import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 
-export function reactTs(reactVersion = '18.2.0', ecmaVersion = 2021, env = { ...globals.browser, ...globals.es2015 }) {
+function reactTs(reactVersion = '18.2.0', ecmaVersion = 2021, env = { ...globals.browser, ...globals.es2015 }) {
   return [
     {
       files: ['**/*.cjs'],
@@ -156,3 +156,5 @@ export function reactTs(reactVersion = '18.2.0', ecmaVersion = 2021, env = { ...
     },
   ];
 }
+
+export { reactTs };
