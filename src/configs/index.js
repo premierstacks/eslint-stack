@@ -17,12 +17,10 @@
  * - Web: https://premierstacks.com
  */
 
-import { reactTs } from './react_ts.js';
-import { browser } from './browser.js';
-import { browserTs } from './browser_ts.js';
-import { node } from './node.js';
-import { nodeTs } from './node_ts.js';
-import { configs } from './configs.js';
-import { ignores } from './ignores.js';
-
-export { reactTs, browser, browserTs, node, nodeTs, configs, ignores };
+export { reactTs } from './react_ts.js';
+export { browser } from './browser.js';
+export { browserTs } from './browser_ts.js';
+export { node } from './node.js';
+export { nodeTs } from './node_ts.js';
+export { configs } from './configs.js';
+export { ignores } from './ignores.js';

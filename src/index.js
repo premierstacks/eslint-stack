@@ -17,6 +17,4 @@
  * - Web: https://premierstacks.com
  */
 
-import * as configs from './configs/index.js';
-
-export { configs };
+export * as configs from './configs/index.js';
