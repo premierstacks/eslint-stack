@@ -37,7 +37,7 @@ const BASE = [
   'storage',
 ];
 
-export default function (merge = [], base = BASE) {
+export function ignores(merge = [], base = BASE) {
   return [
     {
       ignores: [...base, ...merge],
