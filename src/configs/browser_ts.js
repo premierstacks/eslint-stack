@@ -24,7 +24,7 @@ import js from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 
-function browserTs(ecmaVersion = 2021, env = { ...globals.browser, ...globals.es2015 }) {
+export function browserTs(ecmaVersion = 2021, env = { ...globals.browser, ...globals.es2015 }) {
   return [
     {
       files: ['**/*.cjs'],
@@ -105,5 +105,3 @@ function browserTs(ecmaVersion = 2021, env = { ...globals.browser, ...globals.es
     },
   ];
 }
-
-export { browserTs };

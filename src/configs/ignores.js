@@ -17,7 +17,7 @@
  * - Web: https://premierstacks.com
  */
 
-const BASE = [
+export const IGNORES_BASE = [
   '**/.DS_Store',
   '**/.idea',
   '**/.vscode',
@@ -37,12 +37,10 @@ const BASE = [
   'storage',
 ];
 
-function ignores(merge = [], base = BASE) {
+export function ignores(merge = [], base = IGNORES_BASE) {
   return [
     {
       ignores: [...base, ...merge],
     },
   ];
 }
-
-export { ignores };

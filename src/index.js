@@ -17,6 +17,10 @@
  * - Web: https://premierstacks.com
  */
 
-import * as configs from './configs/index.js';
-
-export { configs };
+export * from './configs/browser.js';
+export * from './configs/browser_ts.js';
+export * from './configs/configs.js';
+export * from './configs/ignores.js';
+export * from './configs/node.js';
+export * from './configs/node_ts.js';
+export * from './configs/react_ts.js';

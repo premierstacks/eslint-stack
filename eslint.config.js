@@ -17,6 +17,6 @@
  * - Web: https://premierstacks.com
  */
 
-import { configs } from './src/index.js';
+import { ignores, node, configs } from './src/index.js';
 
-export default [...configs.ignores(), ...configs.node(), ...configs.configs()];
+export default [...ignores(), ...node(), ...configs()];
