@@ -20,5 +20,6 @@ export * from './configs/browser_typescript.js';
 export * from './configs/browser_typescript_react.js';
 export * from './configs/node.js';
 export * from './configs/node_typescript.js';
+export * from './configs/node_typescript_react.js';
 export * from './utils/configs.js';
 export * from './utils/ignores.js';

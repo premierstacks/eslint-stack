@@ -62,13 +62,16 @@ Here are the available module exports and their use cases:
 import * as m from '@premierstacks/eslint-stack';
 
 // for browser-based TypeScript projects with React
-m.browserTypescriptReact(reactVersion = '18.3.1', ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }): [object];
+m.browserTypescriptReact(ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }, reactVersion = '18.3.1'): [object];
 
 // for browser-based TypeScript projects
 m.browserTypescript(ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }): [object];
 
 // for browser-based JavaScript projects
 m.browser(ecmaVersion = 2020, env = { ...globals.browser, ...globals.es2020 }): [object];
+
+// for Node.js-based TypeScript projects with React
+m.nodeTypescriptReact(ecmaVersion = 'latest', env = { ...globals.node, ...globals.es2021 }, reactVersion = '18.3.1'): [object];
 
 // for Node.js-based TypeScript projects
 m.nodeTypescript(ecmaVersion = 'latest', env = { ...globals.node, ...globals.es2021 }): [object];
@@ -98,6 +101,10 @@ Explore the predefined templates for various configurations in the `/templates` 
 - **[/templates/browser.config.js](/templates/browser.config.js)**
 
   For browser-based JavaScript projects.
+
+- **[/templates/node_typescript_react.config.js](/templates/node_typescript_react.config.js)**
+
+  For Node.js-based TypeScript projects with React.
 
 - **[/templates/node_typescript.config.js](/templates/node_typescript.config.js)**
 
@@ -135,6 +142,8 @@ cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript.config.js ./eslint.config.js
 # or
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser.config.js ./eslint.config.js
+#or
+cp ./node_modules/@premierstacks/eslint-stack/templates/node_typescript_react.config.js ./eslint.config.js
 # or
 cp ./node_modules/@premierstacks/eslint-stack/templates/node_typescript.config.js ./eslint.config.js
 # or
@@ -202,7 +211,8 @@ Below is an example of the project structure you will receive upon purchasing th
 │   │   ├── browser_typescript.js
 │   │   ├── browser_typescript_react.js
 │   │   ├── node.js
-│   │   └── node_typescript.js
+│   │   ├── node_typescript.js
+│   │   └── node_typescript_react.js
 │   ├── index.js
 │   └── utils
 │       ├── configs.js
@@ -212,7 +222,8 @@ Below is an example of the project structure you will receive upon purchasing th
     ├── browser_typescript.config.js
     ├── browser_typescript_react.config.js
     ├── node.config.js
-    └── node_typescript.config.js
+    ├── node_typescript.config.js
+    └── node_typescript_react.config.js
 
-4 directories, 20 files
+4 directories, 22 files
 ```

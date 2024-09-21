@@ -25,7 +25,7 @@ import reactPlugin from 'eslint-plugin-react';
 import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 
-export function browserTypescriptReact(ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }, reactVersion = '18.3.1') {
+export function nodeTypescriptReact(ecmaVersion = 'latest', env = { ...globals.node, ...globals.es2021 }, reactVersion = '18.3.1') {
   return [
     {
       files: ['**/*.cjs'],
