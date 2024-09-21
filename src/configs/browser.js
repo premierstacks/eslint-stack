@@ -20,18 +20,22 @@ import js from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 
-export function browser(ecmaVersion = 2020, env = { ...globals.browser, ...globals.es2020 }) {
+const def = { ecmaVersion: 2020, env: { ...globals.browser, ...globals.es2020 } };
+
+export function browser(options = def) {
+  options = { ...def, ...options };
+
   return [
     {
       files: ['**/*.cjs'],
       ignores: ['*.config.cjs', '.*rc.cjs'],
       languageOptions: {
         sourceType: 'commonjs',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parserOptions: {
           sourceType: 'commonjs',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
         },
       },
       plugins: {
@@ -49,11 +53,11 @@ export function browser(ecmaVersion = 2020, env = { ...globals.browser, ...globa
       ignores: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
       languageOptions: {
         sourceType: 'module',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parserOptions: {
           sourceType: 'module',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
         },
       },
       plugins: {

@@ -22,19 +22,23 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 
-export function nodeTypescript(ecmaVersion = 'latest', env = { ...globals.node, ...globals.es2021 }) {
+const def = { ecmaVersion: 'latest', env: { ...globals.node, ...globals.es2021 } };
+
+export function nodeTypescript(options = def) {
+  options = { ...def, ...options };
+
   return [
     {
       files: ['**/*.cjs'],
       ignores: ['*.config.cjs', '.*rc.cjs'],
       languageOptions: {
         sourceType: 'commonjs',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parser: typescriptParser,
         parserOptions: {
           sourceType: 'commonjs',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
         },
       },
@@ -54,12 +58,12 @@ export function nodeTypescript(ecmaVersion = 'latest', env = { ...globals.node, 
       ignores: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
       languageOptions: {
         sourceType: 'module',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parser: typescriptParser,
         parserOptions: {
           sourceType: 'module',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
         },
       },
@@ -78,12 +82,12 @@ export function nodeTypescript(ecmaVersion = 'latest', env = { ...globals.node, 
       files: ['**/*.ts'],
       languageOptions: {
         sourceType: 'module',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parser: typescriptParser,
         parserOptions: {
           sourceType: 'module',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
         },
       },

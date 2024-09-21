@@ -62,28 +62,28 @@ Here are the available module exports and their use cases:
 import * as m from '@premierstacks/eslint-stack';
 
 // for browser-based TypeScript projects with React
-m.browserTypescriptReact(ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }, reactVersion = '18.3.1'): [object];
+m.browserTypescriptReact(options): [object];
 
 // for browser-based TypeScript projects
-m.browserTypescript(ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }): [object];
+m.browserTypescript(options): [object];
 
 // for browser-based JavaScript projects
-m.browser(ecmaVersion = 2020, env = { ...globals.browser, ...globals.es2020 }): [object];
+m.browser(options): [object];
 
 // for Node.js-based TypeScript projects with React
-m.nodeTypescriptReact(ecmaVersion = 'latest', env = { ...globals.node, ...globals.es2021 }, reactVersion = '18.3.1'): [object];
+m.nodeTypescriptReact(options): [object];
 
 // for Node.js-based TypeScript projects
-m.nodeTypescript(ecmaVersion = 'latest', env = { ...globals.node, ...globals.es2021 }): [object];
+m.nodeTypescript(options): [object];
 
 // for Node.js-based JavaScript projects
-m.node(ecmaVersion = 2022, env = { ...globals.node, ...globals.es2021 }): [object];
+m.node(options): [object];
 
 // configure dot files and various configuration files
-m.configs(ecmaVersion = 2022, env = { ...globals.node, ...globals.es2021 }): [object];
+m.configs(options): [object];
 
 // base set of ignore patterns
-m.ignores(merge = [], base = IGNORES_BASE): [object];
+m.ignores(options): [object];
 ```
 
 ## 🧩 Templates

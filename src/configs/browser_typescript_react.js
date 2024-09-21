@@ -25,19 +25,23 @@ import reactPlugin from 'eslint-plugin-react';
 import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 
-export function browserTypescriptReact(ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }, reactVersion = '18.3.1') {
+const def = { reactVersion: '18.3.1', ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2020 } };
+
+export function browserTypescriptReact(options = def) {
+  options = { ...def, ...options };
+
   return [
     {
       files: ['**/*.cjs'],
       ignores: ['*.config.cjs', '.*rc.cjs'],
       languageOptions: {
         sourceType: 'commonjs',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parser: typescriptParser,
         parserOptions: {
           sourceType: 'commonjs',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
           ecmaFeatures: {
             jsx: true,
@@ -64,7 +68,7 @@ export function browserTypescriptReact(ecmaVersion = 'latest', env = { ...global
       },
       settings: {
         react: {
-          version: reactVersion,
+          version: options.reactVersion,
         },
       },
     },
@@ -73,12 +77,12 @@ export function browserTypescriptReact(ecmaVersion = 'latest', env = { ...global
       ignores: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
       languageOptions: {
         sourceType: 'module',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parser: typescriptParser,
         parserOptions: {
           sourceType: 'module',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
           ecmaFeatures: {
             jsx: true,
@@ -105,7 +109,7 @@ export function browserTypescriptReact(ecmaVersion = 'latest', env = { ...global
       },
       settings: {
         react: {
-          version: reactVersion,
+          version: options.reactVersion,
         },
       },
     },
@@ -113,12 +117,12 @@ export function browserTypescriptReact(ecmaVersion = 'latest', env = { ...global
       files: ['**/*.ts', '**/*.tsx'],
       languageOptions: {
         sourceType: 'module',
-        ecmaVersion: ecmaVersion,
-        globals: env,
+        ecmaVersion: options.ecmaVersion,
+        globals: options.env,
         parser: typescriptParser,
         parserOptions: {
           sourceType: 'module',
-          ecmaVersion: ecmaVersion,
+          ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
           ecmaFeatures: {
             jsx: true,
@@ -148,7 +152,7 @@ export function browserTypescriptReact(ecmaVersion = 'latest', env = { ...global
       },
       settings: {
         react: {
-          version: reactVersion,
+          version: options.reactVersion,
         },
       },
     },

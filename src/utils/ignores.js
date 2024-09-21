@@ -15,7 +15,7 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-export const IGNORES_BASE = [
+const def = [
   '**/.DS_Store',
   '**/.env',
   '**/.env.backup',
@@ -51,10 +51,10 @@ export const IGNORES_BASE = [
   'vendor',
 ];
 
-export function ignores(merge = [], base = IGNORES_BASE) {
+export function ignores(options = def) {
   return [
     {
-      ignores: [...base, ...merge],
+      ignores: options,
     },
   ];
 }
