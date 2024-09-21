@@ -1,40 +1,42 @@
 # [ESLint Stack](https://github.com/premierstacks/eslint-stack) by [Tomáš Chochola](https://github.com/tomchochola)
 
-Streamline ESLint in your projects: our package integrates the latest standards and best practices for browser, React, Node.js, and TypeScript in just a few steps. Now built using the new ESLint flat config system for even more streamlined integration.
+A premium, preconfigured ESLint stack that saves developers time and ensures top-tier code quality without manual setup. Ideal for high-stakes environments in individual, corporate, and government projects.
 
-Dive into your projects with our ESLint Stack, designed to cut through the complexity of setting up ESLint. We've distilled the process into a straightforward approach that gets you up and running quickly. Our package consolidates the latest ESLint features and coding best practices, tailored for various development environments including browser, React, Node.js, and TypeScript. This means less time spent on setup and more on coding, with the assurance of premium quality standards. Ideal for developers seeking an efficient and effective way to enforce code quality.
+## 💡 Idea Behind Premierstacks
 
-## 👌 Top Reasons to Opt for Our Premium ESLint ConfStackig
+Premierstacks is a comprehensive solution designed to cover both the development environment and the runtime provisioning/release process to production servers.
 
-By incorporating our Premium ESLint Stack into your development toolkit, you not only enhance the quality and consistency of your code but also adopt a strategic asset that sets your projects apart in the realm of software development, ensuring maintainability, scalability, and compliance with best practices.
+It includes everything from basic project structures to configurations for unit tests, static analysis, linters, automatic code fixers, and compilation or transpilation. Premierstacks ensures that your entire workflow, from development to production deployment, operates smoothly.
 
-### ⏱️ Setup in Just 5 Minutes
+With a single license, you gain access to multiple libraries and guides that allow you to focus on business logic while Premierstacks handles both development and runtime environments.
 
-Begin your projects with confidence using our premium ESLint Stack, designed for quick and seamless integration. This configuration ensures your development environment is aligned with the latest standards in code quality, enabling you to focus on writing exceptional code from the start.
+This software is proprietary and designed for serious developers who value precision and professionalism. Ensure compliance by securing your license today.
 
-### 🕒 Hundreds of Hours of Research, So You Don't Have To
+## ⚡ Why Choose This Solution?
 
-Our ESLint Stack is the product of extensive research and practical experience, encapsulating the best practices and latest enhancements in coding standards. By choosing our configuration, you leverage years of expertise, ensuring your projects adhere to the highest quality standards without the need for exhaustive research.
+- **Premier Quality**
 
-### 🎚️ Minimal Setup, Maximum Code Quality
+  Crafted for discerning developers and teams aiming for the highest standards.
 
-Achieve unparalleled code quality with minimal configuration effort. Our flat config system simplifies the integration process, making it accessible and maintainable, while providing tailored setups for various environments such as browser, Node.js, React, and TypeScript projects.
+- **Expertly Crafted**
 
-### 📘 Zero Expertise Required
+  Built by professionals after hundreds of hours of research and testing.
 
-Regardless of your experience level with ESLint or code quality tools, our configuration is designed to be intuitive and easy to use. This ensures that developers of all skill levels can benefit from advanced linting rules and maintain high-quality code standards effortlessly.
+- **Production-Ready**
 
-### 🔄 Continuously Updated
+  Fully tested in real-world production environments.
 
-Stay at the forefront of coding standards with a configuration that evolves. Our ESLint Stack is regularly updated to incorporate the latest ESLint features and best practices, keeping your projects modern and compliant with evolving development standards.
+- **Efficient Setup**
 
-### ⚔️ Battle-Tested Reliability
+  Get up and running with minimal effort and immediate results.
 
-Depend on an ESLint Stack that has been rigorously tested across a wide range of development scenarios. From small-scale applications to large enterprise projects, our configuration delivers consistent, reliable results, enhancing the maintainability and quality of your code.
+- **Regular Updates**
 
-### 🏆 Premier Quality Guarantee
+  Stay aligned with the latest ESLint standards and best practices.
 
-Opting for our ESLint Stack signifies a commitment to coding excellence. This tool is more than just a set of linting rules; it's a comprehensive solution that elevates your projects' code quality, reflecting the highest standards in software development.
+- **Versatile**
+
+  Supports browser, Node.js, React, and TypeScript environments.
 
 ## 🛡️ License & Usage
 
@@ -42,103 +44,175 @@ Opting for our ESLint Stack signifies a commitment to coding excellence. This to
 
 [![License](https://img.shields.io/badge/License-©_Proprietary-blue.svg)](LICENSE.md)
 
-This software is the exclusive property of Tomáš Chochola, protected by copyright laws.<br />
-Although the source code may be accessible, it is not free for use without a valid license.<br />
-A valid license, obtainable through proper channels, is required for any software use.<br />
-For licensing or inquiries, please contact Tomáš Chochola or refer to the GitHub Sponsors page.
+This software is proprietary property of Tomáš Chochola and protected by copyright laws.<br />
+A valid license is required for any use or manipulation of the software or source code.<br />
+The full license terms are detailed in the LICENSE.md file within the source code repository.
 
-The full license terms are detailed in the LICENSE.md file within the source code repository.<br />
-The terms are subject to changes. Users are encouraged to review them periodically.
+One license grants you access to all Premierstacks products, ensuring a unified solution for your development and production needs.
 
-**Email:** <chocholatom1997@gmail.com><br />
-**Personal GitHub:** [https://github.com/tomchochola](https://github.com/tomchochola)<br />
-**Premierstacks GitHub:** [https://github.com/premierstacks](https://github.com/premierstacks)<br />
-**Sponsor & License:** [https://github.com/sponsors/tomchochola](https://github.com/sponsors/tomchochola)<br />
-**Premierstacks website**: [https://premierstacks.com](https://premierstacks.com)
+**Purchase a license here**: [GitHub Sponsors](https://github.com/sponsors/tomchochola)
 
-### Acquiring a License
+**See full terms in**: [LICENSE.md](LICENSE.md)
 
-To use this software, you must obtain a valid license available through a monthly subscription on the [Sponsor & License](https://github.com/sponsors/tomchochola).<br />
-This platform has been chosen for its reliability and ease of use, providing a secure and straightforward way to manage your subscription.
+## 📦 Module exports
 
-## 🖍️ Highlights
+Here are the available module exports and their use cases:
 
-- **Latest ESLint Features**: Ensures your project is up-to-date with the latest standards.
-- **Flat Config System**: Simplifies configuration, making it more accessible and maintainable.
-- **Versatile Configurations**: Offers tailored setups for various environments including browser, Node.js, and React projects, with or without TypeScript.
-- **Comprehensive Ignoring**: Includes predefined ignore patterns for a cleaner, more efficient setup.
-- **Quality Assurance**: Enforces coding excellence and best practices, ensuring your code is top-notch.
+```js
+import * as m from '@premierstacks/eslint-stack';
 
-## 🎨 Available Configuration Presets
+// for browser-based TypeScript projects with React
+m.browserTypescriptReact(reactVersion = '18.3.1', ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }): [object];
 
-Choose from a variety of preconfigured presets:
+// for browser-based TypeScript projects
+m.browserTypescript(ecmaVersion = 'latest', env = { ...globals.browser, ...globals.es2020 }): [object];
 
-- **reactTs**: Ideal for React projects with TypeScript.
-- **browser**: Perfect for vanilla JavaScript web projects.
-- **browserTs**: Enhanced for TypeScript-based web applications.
-- **node**: Optimized for Node.js environments.
-- **nodeTs**: Tailored for TypeScript usage in Node.js.
-- **configs**: Handles various config and .rc files.
-- **ignores**: Configures predefined ignore patterns.
+// for browser-based JavaScript projects
+m.browser(ecmaVersion = 2020, env = { ...globals.browser, ...globals.es2020 }): [object];
 
-## 🎬 Get Started
+// for Node.js-based TypeScript projects
+m.nodeTypescript(ecmaVersion = 'latest', env = { ...globals.node, ...globals.es2021 }): [object];
 
-### 1️⃣ License Acquisition
+// for Node.js-based JavaScript projects
+m.node(ecmaVersion = 2022, env = { ...globals.node, ...globals.es2021 }): [object];
 
-Secure your license at [Sponsor & License](https://github.com/sponsors/tomchochola).
+// configure dot files and various configuration files
+m.configs(ecmaVersion = 2022, env = { ...globals.node, ...globals.es2021 }): [object];
 
-### 2️⃣ Package Installation
+// base set of ignore patterns
+m.ignores(merge = [], base = IGNORES_BASE): [object];
+```
 
-```shell
+## 🧩 Templates
+
+Explore the predefined templates for various configurations in the `/templates` directory. These templates provide quick-start setups for different environments.
+
+- **[/templates/browser_typescript_react.config.js](/templates/browser_typescript_react.config.js)**
+
+  For browser-based TypeScript projects with React.
+
+- **[/templates/browser_typescript.config.js](/templates/browser_typescript.config.js)**
+
+  For browser-based TypeScript projects.
+
+- **[/templates/browser.config.js](/templates/browser.config.js)**
+
+  For browser-based JavaScript projects.
+
+- **[/templates/node_typescript.config.js](/templates/node_typescript.config.js)**
+
+  For Node.js-based TypeScript projects.
+
+- **[/templates/node.config.js](/templates/node.config.js)**
+
+  For Node.js-based JavaScript projects.
+
+## 🚀 Getting Started
+
+1️⃣ **Review the documentation and license**
+
+Ensure this package fits your needs and that you agree with the terms.
+
+2️⃣ **Purchase a license**
+
+Obtain a valid license through [GitHub Sponsors](https://github.com/sponsors/tomchochola).
+
+3️⃣ **Install the package**
+
+Install using npm:
+
+```bash
 npm install --save-dev github:premierstacks/eslint-stack
 ```
 
-### 3️⃣ Configuration
+4️⃣ **Select a template**
 
-Initialize your `eslint.config.js`:
+Choose one of the predefined configuration templates from the `/templates` directory that best suits your project’s needs. Use the `cp` command to copy it into your project as `eslint.config.js`:
 
-```js
-import { configs } from '@premierstacks/eslint-stack';
-
-export default [...configs.ignores(), ...configs.browser(), ...configs.configs()];
+```bash
+cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react.config.js ./eslint.config.js
+# or
+cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript.config.js ./eslint.config.js
+# or
+cp ./node_modules/@premierstacks/eslint-stack/templates/browser.config.js ./eslint.config.js
+# or
+cp ./node_modules/@premierstacks/eslint-stack/templates/node_typescript.config.js ./eslint.config.js
+# or
+cp ./node_modules/@premierstacks/eslint-stack/templates/node.config.js ./eslint.config.js
 ```
 
-### 4️⃣ Attribution
+5️⃣ **CLI**
 
-Please ensure to manually give credits to the authors in your project documentation or wherever appropriate, as per the license agreement.
+Execute commands:
 
-### 5️⃣ Usage
-
-```shell
+```bash
 # Automatically fix code style issues
 ./node_modules/.bin/eslint --fix .
 
-# Run linters and static analysis tools
+# Run ESLint and perform static analysis
 ./node_modules/.bin/eslint .
 ```
 
-## The Author: Tomáš Chochola
+## 👤 The Author: Tomáš Chochola
 
-_Elite developer crafting exclusive, enterprise-grade software, professional packages, and premium templates to elevate your digital landscape._
+Tomáš Chochola is a leading software developer known for delivering precision-crafted, enterprise-grade solutions. With deep expertise in multiple cutting-edge technologies, Tomáš focuses on ensuring top-tier code quality and efficiency for every project.
 
-Tomáš Chochola is the creator and project visionary behind this project.<br />
-His expertise and innovative approach have been instrumental in shaping the project's direction and ensuring its success.<br />
-Tomáš Chochola's commitment to excellence and his passion for development are reflected in the quality and reliability of the project.
-
-**E-mail**: <chocholatom1997@gmail.com><br />
+**Email**: <chocholatom1997@gmail.com><br />
+**Premierstacks website**: [https://premierstacks.com](https://premierstacks.com)<br />
 **Personal GitHub**: [https://github.com/tomchochola](https://github.com/tomchochola)<br />
 **Premierstacks GitHub**: [https://github.com/premierstacks](https://github.com/premierstacks)<br />
-**Sponsor & License**: [https://github.com/sponsors/tomchochola](https://github.com/sponsors/tomchochola)<br />
-**Premierstacks website**: [https://premierstacks.com](https://premierstacks.com)
+**GitHub Sponsors**: [https://github.com/sponsors/tomchochola](https://github.com/sponsors/tomchochola)
 
-## 🌐 Discover Tomáš Chochola's GitHub Universe
+His areas of specialization include:
 
-Explore the boundless creativity and innovation in [Personal GitHub](https://github.com/tomchochola). As the epicenter of my digital creations, it offers an extensive collection of avant-garde software packages, refined libraries, and polished templates, meticulously crafted to enhance your development journey. Immerse yourself in a world where efficiency and elegance converge, and elevate your projects with tools that redefine excellence.
+- DevOps and AWS
+- PHP and Laravel
+- Secure coding practices
+- Code style and best practices
+- Helper functions and libraries
+- TypeScript, React, and Webpack
+- Reusable templates and configuration stacks
+- Development on Windows 11 and Ubuntu 22/24 (WSL2)
+- ESLint, Prettier, PHP CS Fixer, PostCSS, and Stylelint
 
-## 💰 Empower Innovation: Support and Subscribe
+## 💼 Hire Me
 
-Your support transcends mere contributions; it's the lifeblood of innovation and growth. By subscribing for premium access or becoming a sponsor, you directly contribute to the advancement of high-caliber software. Embrace the opportunity to be part of a visionary journey by visiting my [Sponsor & License](https://github.com/sponsors/tomchochola).
+Whether you need short-term code assistance, in-depth analysis, or help integrating premium packages, I'm available for collaboration. Let's take your project to the next level.
 
-## 🤝 Join Forces with Tomáš Chochola
+You can also support my work by becoming a sponsor through [GitHub Sponsors](https://github.com/sponsors/tomchochola).
 
-Embark on a collaborative venture with a developer whose passion for perfection knows no bounds. Whether it's for groundbreaking startups, global enterprises, or transformative government projects, my arsenal of skills is at your command. Let's merge visions and craftsmanship to forge software that stands a class apart. Connect with me at <chocholatom1997@gmail.com> for collaborations that transcend conventional boundaries.
+If you're interested in hiring me for any of the above or for solving IT issues, feel free to reach out. I'm open to collaboration, whether it's for new packages, ongoing projects, or quick IT fixes.
+
+## 🌳 Project Structure (Tree)
+
+Below is an example of the project structure you will receive upon purchasing the ESLint Stack. This allows you to see what’s included and know exactly what you are paying for:
+
+```sh
+.
+├── AUTHORS.md
+├── LICENSE.md
+├── Makefile
+├── README.md
+├── eslint.config.js
+├── package.json
+├── prettier.config.js
+├── src
+│   ├── configs
+│   │   ├── browser.js
+│   │   ├── browser_typescript.js
+│   │   ├── browser_typescript_react.js
+│   │   ├── node.js
+│   │   └── node_typescript.js
+│   ├── index.js
+│   └── utils
+│       ├── configs.js
+│       └── ignores.js
+└── templates
+    ├── browser.config.js
+    ├── browser_typescript.config.js
+    ├── browser_typescript_react.config.js
+    ├── node.config.js
+    └── node_typescript.config.js
+
+4 directories, 20 files
+```

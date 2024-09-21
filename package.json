@@ -1,6 +1,6 @@
 {
   "name": "@premierstacks/eslint-stack",
-  "description": "eslint stack",
+  "description": "premierstacks eslint stack",
   "keywords": [
     "premierstacks",
     "eslint-stack",
@@ -29,6 +29,8 @@
     "url": "https://github.com/sponsors/tomchochola"
   },
   "main": "./src/index.js",
+  "module": "./src/index.js",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/premierstacks/eslint-stack.git"
