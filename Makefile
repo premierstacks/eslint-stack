@@ -84,7 +84,7 @@ testing:
 
 .PHONY: tree
 tree: clean
-	sed -i '/## Tree/,/$$/d' README.md
+	sed -i '/## Tree/,$$d' README.md
 	echo '## Tree' >> README.md
 	echo '' >> README.md
 	echo 'The following is a breakdown of the folder and file structure within this repository. It provides an overview of how the code is organized and where to find key components.' >> README.md

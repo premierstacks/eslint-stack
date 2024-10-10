@@ -160,3 +160,39 @@ My mission is to develop reusable solutions that enhance code quality, boost pro
 **👨 GitHub Personal: [https://github.com/tomchochola](https://github.com/tomchochola)**<br />
 **🏢 GitHub Organization: [https://github.com/premierstacks](https://github.com/premierstacks)**<br />
 **💰 GitHub Sponsors: [https://github.com/sponsors/tomchochola](https://github.com/sponsors/tomchochola)**<br />
+
+## Tree
+
+The following is a breakdown of the folder and file structure within this repository. It provides an overview of how the code is organized and where to find key components.
+
+```bash
+.
+├── AUTHORS.md
+├── LICENSE.md
+├── Makefile
+├── README.md
+├── eslint.config.js
+├── package.json
+├── prettier.config.js
+├── src
+│   ├── configs
+│   │   ├── browser.js
+│   │   ├── browser_typescript.js
+│   │   ├── browser_typescript_react.js
+│   │   ├── node.js
+│   │   ├── node_typescript.js
+│   │   └── node_typescript_react.js
+│   ├── index.js
+│   └── utils
+│       ├── configs.js
+│       └── ignores.js
+└── templates
+    ├── browser.template
+    ├── browser_typescript.template
+    ├── browser_typescript_react.template
+    ├── node.template
+    ├── node_typescript.template
+    └── node_typescript_react.template
+
+4 directories, 22 files
+```
