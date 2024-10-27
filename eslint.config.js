@@ -15,6 +15,6 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-import { ignores, node, configs } from './src/index.js';
+import { configs, ignores, node } from './src/index.js';
 
 export default [...ignores(), ...node(), ...configs()];

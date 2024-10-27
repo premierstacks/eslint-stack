@@ -15,12 +15,12 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-import globals from 'globals';
 import js from '@eslint/js';
+import typescriptPlugin from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
-import typescriptParser from '@typescript-eslint/parser';
-import typescriptPlugin from '@typescript-eslint/eslint-plugin';
+import globals from 'globals';
 
 const def = { ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2020 } };
 

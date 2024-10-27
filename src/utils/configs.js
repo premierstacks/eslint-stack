@@ -15,10 +15,10 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-import globals from 'globals';
 import js from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
+import globals from 'globals';
 
 const def = { ecmaVersion: 2022, env: { ...globals.node, ...globals.es2021 } };
 

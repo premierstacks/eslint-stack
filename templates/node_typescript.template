@@ -1,3 +1,3 @@
-import { ignores, nodeTypescript, configs } from '@premierstacks/eslint-stack';
+import { configs, ignores, nodeTypescript } from '@premierstacks/eslint-stack';
 
 export default [...ignores(), ...nodeTypescript(), ...configs()];

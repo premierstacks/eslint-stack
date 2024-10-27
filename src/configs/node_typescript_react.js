@@ -15,15 +15,15 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-import globals from 'globals';
 import js from '@eslint/js';
-import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
-import prettierConfig from 'eslint-config-prettier';
-import prettierPlugin from 'eslint-plugin-prettier';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import reactPlugin from 'eslint-plugin-react';
-import typescriptParser from '@typescript-eslint/parser';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import prettierConfig from 'eslint-config-prettier';
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
+import prettierPlugin from 'eslint-plugin-prettier';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
 const def = { reactVersion: '18.3.1', ecmaVersion: 'latest', env: { ...globals.node, ...globals.es2021 } };
 
