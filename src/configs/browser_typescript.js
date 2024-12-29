@@ -104,7 +104,7 @@ export function browserTypescript(options = def) {
         ...prettierPlugin.configs.recommended.rules,
         'prettier/prettier': 'off',
         '@typescript-eslint/consistent-type-exports': 'error',
-        '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', fixStyle: 'inline-type-imports' }],
+        '@typescript-eslint/consistent-type-imports': 'error',
       },
     },
   ];
