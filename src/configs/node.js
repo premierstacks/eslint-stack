@@ -20,7 +20,7 @@ import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
 
-const def = { ecmaVersion: 2022, env: { ...globals.node, ...globals.es2021 } };
+const def = { ecmaVersion: 2022, env: { ...globals.node, ...globals.es2022 } };
 
 export function node(options = def) {
   options = { ...def, ...options };
