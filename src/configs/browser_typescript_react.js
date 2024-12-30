@@ -25,7 +25,7 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
-const def = { reactVersion: '18.3.1', ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2020 } };
+const def = { reactVersion: '19.0', ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2020 } };
 
 export function browserTypescriptReact(options = def) {
   options = { ...def, ...options };

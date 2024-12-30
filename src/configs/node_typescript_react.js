@@ -25,7 +25,7 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
-const def = { reactVersion: '18.3.1', ecmaVersion: 'latest', env: { ...globals.node, ...globals.es2022 } };
+const def = { reactVersion: '19.0', ecmaVersion: 'latest', env: { ...globals.node, ...globals.es2022 } };
 
 export function nodeTypescriptReact(options = def) {
   options = { ...def, ...options };
