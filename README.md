@@ -142,17 +142,17 @@ The following is a breakdown of the folder and file structure within this reposi
 
 ```bash
 .
+├── AUTHORS.md
 ├── .editorconfig
+├── eslint.config.js
 ├── .gitattributes
 ├── .gitignore
-├── .prettierignore
-├── AUTHORS.md
-├── LICENSE.md
+├── LICENSE
 ├── Makefile
-├── README.md
-├── eslint.config.js
 ├── package.json
 ├── prettier.config.js
+├── .prettierignore
+├── README.md
 ├── src
 │   ├── configs
 │   │   ├── browser.js
@@ -167,11 +167,11 @@ The following is a breakdown of the folder and file structure within this reposi
 │       └── ignores.js
 └── templates
     ├── browser.template
-    ├── browser_typescript.template
     ├── browser_typescript_react.template
+    ├── browser_typescript.template
     ├── node.template
-    ├── node_typescript.template
-    └── node_typescript_react.template
+    ├── node_typescript_react.template
+    └── node_typescript.template
 
-4 directories, 26 files
+5 directories, 26 files
 ```
