@@ -12,7 +12,7 @@
     "email": "chocholatom1997@gmail.com",
     "url": "https://github.com/premierstacks/eslint-stack/issues"
   },
-  "license": "CC-BY-ND-4.0",
+  "license": "Apache-2.0",
   "author": {
     "email": "chocholatom1997@gmail.com",
     "name": "Tomáš Chochola",
@@ -31,21 +31,36 @@
   },
   "repository": "github:premierstacks/eslint-stack",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.18",
-    "@typescript-eslint/parser": "^8.18",
-    "eslint": "^9.17",
-    "eslint-config-prettier": "^9.1",
+    "@typescript-eslint/eslint-plugin": "^8.25",
+    "@typescript-eslint/parser": "^8.25",
+    "eslint": "^9.21",
+    "eslint-config-prettier": "^10.0",
     "eslint-plugin-jsx-a11y": "^6.10",
     "eslint-plugin-prettier": "^5.2",
     "eslint-plugin-react": "^7.37",
-    "eslint-plugin-react-hooks": "^5.1",
-    "globals": "^15.14"
+    "eslint-plugin-react-hooks": "^5.2",
+    "globals": "^16.0"
   },
   "devDependencies": {
-    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack"
+    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack",
+    "npm-run-all": "^4.1"
   },
-  "private": true,
   "type": "module",
   "sideEffects": false,
-  "main": "./src/index.js"
+  "main": "./src/index.js",
+  "scripts": {
+    "npm:install": "npm install --install-links --include prod --include dev --include peer --include optional",
+    "npm:update": "npm update --install-links --include prod --include dev --include peer --include optional",
+    "security": "run-s npm:audit",
+    "npm:audit": "npm audit --audit-level info --include prod --include dev --include peer --include optional",
+    "clean": "git clean -xfd ./node_modules ./package-lock.json",
+    "fix": "run-s fix:eslint fix:prettier",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier -w .",
+    "lint": "run-s lint:eslint lint:prettier",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier -c .",
+    "local": "npm run npm:install",
+    "check": "run-s lint security"
+  }
 }
