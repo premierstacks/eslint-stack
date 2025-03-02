@@ -13,10 +13,10 @@
 
 const def = ['**/.DS_Store', '**/.fleet', '**/.idea', '**/.vscode', '**/.zed'];
 
-export function ignores(options = def) {
+export function ignores(ignores = [], defaults = def) {
   return [
     {
-      ignores: options,
+      ignores: [...ignores, ...defaults],
     },
   ];
 }
