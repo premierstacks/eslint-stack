@@ -71,7 +71,13 @@ limitations under the License.
 Here are the available module exports:
 
 ```js
-import { browserTypescriptReact, browserTypescript, browser, nodeTypescriptReact, nodeTypescript, node, configs, ignores } from '@premierstacks/eslint-stack';
+import {
+createEslintConfigBrowserTypescriptReact,
+createEslintConfigBrowserTypescript,
+createEslintOverridesForConfigs,
+createEslintIgnorePatterns,
+createEslintConfigNodeTypescript,
+} from '@premierstacks/eslint-stack';
 ```
 
 ## Templates
@@ -80,10 +86,7 @@ Explore the predefined templates for various configurations in the [/templates](
 
 **[/templates/browser_typescript_react.template](/templates/browser_typescript_react.template)**<br />
 **[/templates/browser_typescript.template](/templates/browser_typescript.template)**<br />
-**[/templates/browser.template](/templates/browser.template)**<br />
-**[/templates/node_typescript_react.template](/templates/node_typescript_react.template)**<br />
 **[/templates/node_typescript.template](/templates/node_typescript.template)**<br />
-**[/templates/node.template](/templates/node.template)**<br />
 
 ## Getting Started
 
@@ -96,7 +99,7 @@ Ensure this package fits your needs and that you agree with the terms.
 Install using npm:
 
 ```bash
-npm install --save-dev github:premierstacks/eslint-stack
+npm install --save-dev github:premierstacks/eslint-stack#semver:^2.0
 ```
 
 **3. Select a template**
@@ -109,14 +112,8 @@ Use the `cp` command to copy it into your project as `/eslint.config.js`:
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react.template ./eslint.config.js
 # or
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript.template ./eslint.config.js
-# or
-cp ./node_modules/@premierstacks/eslint-stack/templates/browser.template ./eslint.config.js
 #or
-cp ./node_modules/@premierstacks/eslint-stack/templates/node_typescript_react.template ./eslint.config.js
-# or
 cp ./node_modules/@premierstacks/eslint-stack/templates/node_typescript.template ./eslint.config.js
-# or
-cp ./node_modules/@premierstacks/eslint-stack/templates/node.template ./eslint.config.js
 ```
 
 **4. CLI**

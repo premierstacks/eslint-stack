@@ -1,3 +1,0 @@
-import { configs, ignores, nodeTypescriptReact } from '@premierstacks/eslint-stack';
-
-export default [...ignores(), ...nodeTypescriptReact(), ...configs()];

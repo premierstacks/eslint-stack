@@ -15,12 +15,15 @@ import js from '@eslint/js';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import prettierConfig from 'eslint-config-prettier';
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import prettierPlugin from 'eslint-plugin-prettier';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
-const def = { ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2020 } };
+const def = { reactVersion: '19.0', ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2020 } };
 
-export function browserTypescript(options = def) {
+export function createEslintConfigBrowserTypescriptReact(options = def) {
   options = { ...def, ...options };
 
   return [
@@ -36,22 +39,38 @@ export function browserTypescript(options = def) {
           sourceType: 'commonjs',
           ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
+          ecmaFeatures: {
+            jsx: true,
+            jsxPragma: null,
+          },
         },
       },
       plugins: {
         '@typescript-eslint': typescriptPlugin,
+        react: reactPlugin,
+        'react-hooks': reactHooksPlugin,
+        'jsx-a11y': jsxA11yPlugin,
         prettier: prettierPlugin,
       },
       rules: {
         ...js.configs.recommended.rules,
+        ...reactPlugin.configs.recommended.rules,
+        ...reactPlugin.configs['jsx-runtime'].rules,
+        ...reactHooksPlugin.configs.recommended.rules,
+        ...jsxA11yPlugin.configs.strict.rules,
         ...prettierConfig.rules,
         ...prettierPlugin.configs.recommended.rules,
         'prettier/prettier': 'off',
       },
+      settings: {
+        react: {
+          version: options.reactVersion,
+        },
+      },
     },
     {
-      files: ['**/*.js', '**/*.mjs'],
-      ignores: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
+      files: ['**/*.js', '**/*.mjs', '**/*.jsx'],
+      ignores: ['*.config.js', '.*rc.js', '*.config.mjs', '.*rc.mjs'],
       languageOptions: {
         sourceType: 'module',
         ecmaVersion: options.ecmaVersion,
@@ -61,21 +80,38 @@ export function browserTypescript(options = def) {
           sourceType: 'module',
           ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
+          ecmaFeatures: {
+            jsx: true,
+            jsxPragma: null,
+          },
         },
       },
       plugins: {
         '@typescript-eslint': typescriptPlugin,
+        react: reactPlugin,
+        'react-hooks': reactHooksPlugin,
+        'jsx-a11y': jsxA11yPlugin,
         prettier: prettierPlugin,
       },
       rules: {
         ...js.configs.recommended.rules,
+        ...reactPlugin.configs.recommended.rules,
+        ...reactPlugin.configs['jsx-runtime'].rules,
+        ...reactHooksPlugin.configs.recommended.rules,
+        ...jsxA11yPlugin.configs.strict.rules,
         ...prettierConfig.rules,
         ...prettierPlugin.configs.recommended.rules,
         'prettier/prettier': 'off',
       },
+      settings: {
+        react: {
+          version: options.reactVersion,
+        },
+      },
     },
     {
-      files: ['**/*.ts'],
+      files: ['**/*.ts', '**/*.tsx'],
+      ignores: ['*.config.ts', '.*rc.ts'],
       languageOptions: {
         sourceType: 'module',
         ecmaVersion: options.ecmaVersion,
@@ -85,10 +121,17 @@ export function browserTypescript(options = def) {
           sourceType: 'module',
           ecmaVersion: options.ecmaVersion,
           project: './tsconfig.json',
+          ecmaFeatures: {
+            jsx: true,
+            jsxPragma: null,
+          },
         },
       },
       plugins: {
         '@typescript-eslint': typescriptPlugin,
+        react: reactPlugin,
+        'react-hooks': reactHooksPlugin,
+        'jsx-a11y': jsxA11yPlugin,
         prettier: prettierPlugin,
       },
       rules: {
@@ -96,11 +139,20 @@ export function browserTypescript(options = def) {
         ...typescriptPlugin.configs['eslint-recommended'].overrides[0].rules,
         ...typescriptPlugin.configs['strict-type-checked'].rules,
         ...typescriptPlugin.configs['stylistic-type-checked'].rules,
+        ...reactPlugin.configs.recommended.rules,
+        ...reactPlugin.configs['jsx-runtime'].rules,
+        ...reactHooksPlugin.configs.recommended.rules,
+        ...jsxA11yPlugin.configs.strict.rules,
         ...prettierConfig.rules,
         ...prettierPlugin.configs.recommended.rules,
         'prettier/prettier': 'off',
         '@typescript-eslint/consistent-type-exports': 'error',
         '@typescript-eslint/consistent-type-imports': 'error',
+      },
+      settings: {
+        react: {
+          version: options.reactVersion,
+        },
       },
     },
   ];

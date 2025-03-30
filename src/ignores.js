@@ -13,7 +13,7 @@
 
 const def = ['**/.DS_Store', '**/.fleet', '**/.idea', '**/.vscode', '**/.zed'];
 
-export function ignores(ignores = [], defaults = def) {
+export function createEslintIgnorePatterns(ignores = [], defaults = def) {
   return [
     {
       ignores: [...ignores, ...defaults],

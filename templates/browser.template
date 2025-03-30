@@ -1,3 +1,0 @@
-import { browser, configs, ignores } from '@premierstacks/eslint-stack';
-
-export default [...ignores(), ...browser(), ...configs()];

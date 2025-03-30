@@ -20,7 +20,7 @@ import globals from 'globals';
 
 const def = { ecmaVersion: 'latest', env: { ...globals.node, ...globals.es2022 } };
 
-export function nodeTypescript(options = def) {
+export function createEslintConfigNodeTypescript(options = def) {
   options = { ...def, ...options };
 
   return [
@@ -51,7 +51,7 @@ export function nodeTypescript(options = def) {
     },
     {
       files: ['**/*.js', '**/*.mjs'],
-      ignores: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
+      ignores: ['*.config.js', '.*rc.js', '*.config.mjs', '.*rc.mjs'],
       languageOptions: {
         sourceType: 'module',
         ecmaVersion: options.ecmaVersion,
@@ -76,6 +76,7 @@ export function nodeTypescript(options = def) {
     },
     {
       files: ['**/*.ts'],
+      ignores: ['*.config.ts', '.*rc.ts'],
       languageOptions: {
         sourceType: 'module',
         ecmaVersion: options.ecmaVersion,

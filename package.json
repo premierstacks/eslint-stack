@@ -42,25 +42,26 @@
     "globals": "^16.0"
   },
   "devDependencies": {
-    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack",
-    "npm-run-all": "^4.1"
+    "@premierstacks/prettier-stack": "github:premierstacks/prettier-stack#semver:^2.0"
   },
   "type": "module",
   "sideEffects": false,
   "main": "./src/index.js",
   "scripts": {
-    "npm:install": "npm install --install-links --include prod --include dev --include peer --include optional",
-    "npm:update": "npm update --install-links --include prod --include dev --include peer --include optional",
-    "security": "run-s npm:audit",
-    "npm:audit": "npm audit --audit-level info --include prod --include dev --include peer --include optional",
-    "clean": "git clean -xfd ./node_modules ./package-lock.json",
-    "fix": "run-s fix:eslint fix:prettier",
+    "check": "npm run lint && npm run dependencies",
+    "clean": "npm run clean:npm",
+    "clean:npm": "git clean -xfd ./node_modules ./package-lock.json",
+    "commit": "npm run local && npm run fix && npm run check",
+    "dependencies": "npm run npm:audit",
+    "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier -w .",
-    "lint": "run-s lint:eslint lint:prettier",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier -c .",
     "local": "npm run npm:install",
-    "check": "run-s lint security"
+    "npm:audit": "npm audit --audit-level info --include prod --include dev --include peer --include optional",
+    "npm:install": "npm install --install-links --include prod --include dev --include peer --include optional",
+    "npm:update": "npm update --install-links --include prod --include dev --include peer --include optional"
   }
 }

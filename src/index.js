@@ -11,11 +11,9 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-export * from './configs/browser.js';
-export * from './configs/browser_typescript.js';
-export * from './configs/browser_typescript_react.js';
-export * from './configs/node.js';
-export * from './configs/node_typescript.js';
-export * from './configs/node_typescript_react.js';
-export * from './utils/configs.js';
-export * from './utils/ignores.js';
+export * from './browser_typescript.js';
+export * from './browser_typescript_react.js';
+export * from './configs.js';
+export * from './ignores.js';
+export * from './node.js';
+export * from './node_typescript.js';

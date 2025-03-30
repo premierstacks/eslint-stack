@@ -16,21 +16,20 @@ import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
 
-const def = { ecmaVersion: 2020, env: { ...globals.browser, ...globals.es2020 } };
+const def = { ecmaVersion: 2022, env: { ...globals.node, ...globals.es2022 } };
 
-export function browser(options = def) {
+export function createEslintOverridesForConfigs(options = def) {
   options = { ...def, ...options };
 
   return [
     {
-      files: ['**/*.cjs'],
-      ignores: ['*.config.cjs', '.*rc.cjs'],
+      files: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
       languageOptions: {
-        sourceType: 'commonjs',
+        sourceType: 'module',
         ecmaVersion: options.ecmaVersion,
         globals: options.env,
         parserOptions: {
-          sourceType: 'commonjs',
+          sourceType: 'module',
           ecmaVersion: options.ecmaVersion,
         },
       },
@@ -45,14 +44,13 @@ export function browser(options = def) {
       },
     },
     {
-      files: ['**/*.js', '**/*.mjs'],
-      ignores: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
+      files: ['*.config.cjs', '.*rc.cjs'],
       languageOptions: {
-        sourceType: 'module',
+        sourceType: 'commonjs',
         ecmaVersion: options.ecmaVersion,
         globals: options.env,
         parserOptions: {
-          sourceType: 'module',
+          sourceType: 'commonjs',
           ecmaVersion: options.ecmaVersion,
         },
       },
