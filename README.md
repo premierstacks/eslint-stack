@@ -72,11 +72,11 @@ Here are the available module exports:
 
 ```js
 import {
-createEslintConfigBrowserTypescriptReact,
-createEslintConfigBrowserTypescript,
-createEslintOverridesForConfigs,
-createEslintIgnorePatterns,
-createEslintConfigNodeTypescript,
+  createEslintConfigBrowserTypescriptReact,
+  createEslintConfigBrowserTypescript,
+  createEslintOverridesForConfigs,
+  createEslintIgnorePatterns,
+  createEslintConfigNodeTypescript,
 } from '@premierstacks/eslint-stack';
 ```
 
