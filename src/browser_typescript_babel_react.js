@@ -23,7 +23,7 @@ import globals from 'globals';
 
 const def = { reactVersion: '19.1', ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2023 } };
 
-export function createEslintConfigBrowserTypescriptReact(options = def) {
+export function createEslintConfigBrowserTypescriptBabelReact(options = def) {
   options = { ...def, ...options };
 
   return [
