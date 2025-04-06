@@ -18,7 +18,7 @@ import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
 
-const def = { ecmaVersion: 'latest', env: { ...globals.node, ...globals.es2022 } };
+const def = { ecmaVersion: 2024, env: { ...globals.node, ...globals.es2024 } };
 
 export function createEslintConfigNodeTypescript(options = def) {
   options = { ...def, ...options };

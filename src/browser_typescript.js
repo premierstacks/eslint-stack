@@ -18,7 +18,7 @@ import prettierConfig from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
 
-const def = { ecmaVersion: 'latest', env: { ...globals.browser, ...globals.es2020 } };
+const def = { ecmaVersion: 2024, env: { ...globals.browser, ...globals.es2020 } };
 
 export function createEslintConfigBrowserTypescript(options = def) {
   options = { ...def, ...options };
