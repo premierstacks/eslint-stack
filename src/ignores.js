@@ -11,12 +11,8 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-const def = ['**/.DS_Store', '**/.fleet', '**/.idea', '**/.vscode', '**/.zed'];
+import { globalIgnores } from 'eslint/config';
 
-export function createEslintIgnorePatterns(ignores = [], defaults = def) {
-  return [
-    {
-      ignores: [...ignores, ...defaults],
-    },
-  ];
+export function createEslintIgnorePatterns(ignores = [], name = undefined) {
+  return globalIgnores(['**/.DS_Store', '**/.fleet', '**/.idea', '**/.vscode', '**/.zed', ...ignores], name);
 }

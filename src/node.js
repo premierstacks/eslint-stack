@@ -11,60 +11,19 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-import js from '@eslint/js';
-import prettierConfig from 'eslint-config-prettier';
-import prettierPlugin from 'eslint-plugin-prettier';
+import eslint from '@eslint/js';
+import prettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
+import typescript from 'typescript-eslint';
 
-const def = { ecmaVersion: 2024, env: { ...globals.node, ...globals.es2024 } };
-
-export function createEslintConfigNode(options = def) {
-  options = { ...def, ...options };
-
-  return [
+export function createEslintConfigNode() {
+  return typescript.config([
+    eslint.configs.recommended,
     {
-      files: ['**/*.cjs'],
-      ignores: ['*.config.cjs', '.*rc.cjs'],
       languageOptions: {
-        sourceType: 'commonjs',
-        ecmaVersion: options.ecmaVersion,
-        globals: options.env,
-        parserOptions: {
-          sourceType: 'commonjs',
-          ecmaVersion: options.ecmaVersion,
-        },
-      },
-      plugins: {
-        prettier: prettierPlugin,
-      },
-      rules: {
-        ...js.configs.recommended.rules,
-        ...prettierConfig.rules,
-        ...prettierPlugin.configs.recommended.rules,
-        'prettier/prettier': 'off',
+        globals: { ...globals.node, ...globals.es2025 },
       },
     },
-    {
-      files: ['**/*.js', '**/*.mjs'],
-      ignores: ['*.config.js', '.*rc.js', '*.config.mjs', '.*rc.mjs'],
-      languageOptions: {
-        sourceType: 'module',
-        ecmaVersion: options.ecmaVersion,
-        globals: options.env,
-        parserOptions: {
-          sourceType: 'module',
-          ecmaVersion: options.ecmaVersion,
-        },
-      },
-      plugins: {
-        prettier: prettierPlugin,
-      },
-      rules: {
-        ...js.configs.recommended.rules,
-        ...prettierConfig.rules,
-        ...prettierPlugin.configs.recommended.rules,
-        'prettier/prettier': 'off',
-      },
-    },
-  ];
+    prettier,
+  ]);
 }

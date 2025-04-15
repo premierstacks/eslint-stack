@@ -11,6 +11,7 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
+import { defineConfig } from 'eslint/config';
 import { createEslintConfigNode, createEslintIgnorePatterns, createEslintOverridesForConfigs } from './src/index.js';
 
-export default [...createEslintIgnorePatterns(), ...createEslintConfigNode(), ...createEslintOverridesForConfigs()];
+export default defineConfig([createEslintIgnorePatterns(), createEslintConfigNode(), createEslintOverridesForConfigs()]);

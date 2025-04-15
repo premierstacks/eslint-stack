@@ -11,58 +11,17 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-import js from '@eslint/js';
-import prettierConfig from 'eslint-config-prettier';
-import prettierPlugin from 'eslint-plugin-prettier';
 import globals from 'globals';
+import typescript from 'typescript-eslint';
 
-const def = { ecmaVersion: 2024, env: { ...globals.node, ...globals.es2024 } };
-
-export function createEslintOverridesForConfigs(options = def) {
-  options = { ...def, ...options };
-
-  return [
+export function createEslintOverridesForConfigs() {
+  return typescript.config([
     {
+      extends: [typescript.configs.disableTypeChecked],
       files: ['*.config.js', '*.config.mjs', '.*rc.js', '.*rc.mjs'],
       languageOptions: {
-        sourceType: 'module',
-        ecmaVersion: options.ecmaVersion,
-        globals: options.env,
-        parserOptions: {
-          sourceType: 'module',
-          ecmaVersion: options.ecmaVersion,
-        },
-      },
-      plugins: {
-        prettier: prettierPlugin,
-      },
-      rules: {
-        ...js.configs.recommended.rules,
-        ...prettierConfig.rules,
-        ...prettierPlugin.configs.recommended.rules,
-        'prettier/prettier': 'off',
+        globals: { ...globals.node, ...globals.es2025 },
       },
     },
-    {
-      files: ['*.config.cjs', '.*rc.cjs'],
-      languageOptions: {
-        sourceType: 'commonjs',
-        ecmaVersion: options.ecmaVersion,
-        globals: options.env,
-        parserOptions: {
-          sourceType: 'commonjs',
-          ecmaVersion: options.ecmaVersion,
-        },
-      },
-      plugins: {
-        prettier: prettierPlugin,
-      },
-      rules: {
-        ...js.configs.recommended.rules,
-        ...prettierConfig.rules,
-        ...prettierPlugin.configs.recommended.rules,
-        'prettier/prettier': 'off',
-      },
-    },
-  ];
+  ]);
 }
