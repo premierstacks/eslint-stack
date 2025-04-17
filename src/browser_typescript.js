@@ -16,7 +16,7 @@ import prettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
 import typescript from 'typescript-eslint';
 
-export function createEslintConfigNodeTypescript() {
+export function createEslintConfigBrowserTypescript() {
   return typescript.config([
     eslint.configs.recommended,
     typescript.configs.strictTypeChecked,
