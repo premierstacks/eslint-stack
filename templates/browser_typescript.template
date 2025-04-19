@@ -1,4 +1,4 @@
 import { defineConfig } from 'eslint/config';
-import { createEslintConfigBrowserTypescript, createEslintOverridesForConfigs, createEslintIgnorePatterns } from '@premierstacks/eslint-stack';
+import { createEslintConfigBrowserTypescript, createEslintConfigIgnoresRoot, createEslintConfigIgnores } from '@premierstacks/eslint-stack';
 
-export default defineConfig([createEslintIgnorePatterns(), createEslintConfigBrowserTypescript(), createEslintOverridesForConfigs()]);
+export default defineConfig([createEslintConfigIgnores(), createEslintConfigBrowserTypescript(), createEslintConfigIgnoresRoot()]);

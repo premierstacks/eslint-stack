@@ -73,11 +73,13 @@ Here are the available module exports:
 ```js
 import {
   createEslintConfigBrowserTypescript,
-  createEslintConfigBrowserTypescriptBabelReact,
   createEslintConfigBrowserTypescriptReact,
+  createEslintConfigIgnores,
+  createEslintConfigIgnoresRc,
+  createEslintConfigIgnoresRoot,
+  createEslintConfigLooseRc,
+  createEslintConfigNode,
   createEslintConfigNodeTypescript,
-  createEslintIgnorePatterns,
-  createEslintOverridesForConfigs,
 } from '@premierstacks/eslint-stack';
 ```
 
@@ -85,7 +87,6 @@ import {
 
 Explore the predefined templates for various configurations in the [/templates](/templates) directory. These templates provide quick-start setups for different environments.
 
-**[/templates/browser_typescript_babel_react.template](/templates/browser_typescript_babel_react.template)**<br />
 **[/templates/browser_typescript_react.template](/templates/browser_typescript_react.template)**<br />
 **[/templates/browser_typescript.template](/templates/browser_typescript.template)**<br />
 **[/templates/node_typescript.template](/templates/node_typescript.template)**<br />
@@ -112,8 +113,6 @@ Choose one of the predefined configuration templates from the [/templates](/temp
 Use the `cp` command to copy it into your project as `/eslint.config.js`:
 
 ```bash
-cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_babel_react.template ./eslint.config.js
-# or
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react.template ./eslint.config.js
 # or
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript.template ./eslint.config.js

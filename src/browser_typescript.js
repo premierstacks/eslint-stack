@@ -13,37 +13,23 @@
 
 import eslint from '@eslint/js';
 import prettier from 'eslint-config-prettier/flat';
-import globals from 'globals';
+import sonarjs from 'eslint-plugin-sonarjs';
+import { defineConfig } from 'eslint/config';
 import typescript from 'typescript-eslint';
 
 export function createEslintConfigBrowserTypescript() {
-  return typescript.config([
+  return defineConfig([
     eslint.configs.recommended,
     typescript.configs.strictTypeChecked,
     typescript.configs.stylisticTypeChecked,
-    {
-      rules: {
-        '@typescript-eslint/consistent-type-exports': 'error',
-        '@typescript-eslint/consistent-type-imports': 'error',
-      },
-    },
+    sonarjs.configs.recommended,
+    prettier,
     {
       languageOptions: {
         parserOptions: {
           projectService: true,
-          tsconfigRootDir: import.meta.dirname,
         },
       },
     },
-    {
-      files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'],
-      extends: [typescript.configs.disableTypeChecked],
-    },
-    {
-      languageOptions: {
-        globals: { ...globals.browser, ...globals.es2020 },
-      },
-    },
-    prettier,
   ]);
 }

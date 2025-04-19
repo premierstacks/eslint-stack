@@ -12,6 +12,6 @@
  */
 
 import { defineConfig } from 'eslint/config';
-import { createEslintConfigNode, createEslintIgnorePatterns, createEslintOverridesForConfigs } from './src/index.js';
+import { createEslintConfigIgnores, createEslintConfigIgnoresRoot, createEslintConfigNode } from './src/index.js';
 
-export default defineConfig([createEslintIgnorePatterns(), createEslintConfigNode(), createEslintOverridesForConfigs()]);
+export default defineConfig([createEslintConfigIgnores(), createEslintConfigNode(), createEslintConfigIgnoresRoot()]);

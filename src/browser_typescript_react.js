@@ -16,11 +16,12 @@ import prettier from 'eslint-config-prettier/flat';
 import a11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import hooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
+import sonarjs from 'eslint-plugin-sonarjs';
+import { defineConfig } from 'eslint/config';
 import typescript from 'typescript-eslint';
 
 export function createEslintConfigBrowserTypescriptReact() {
-  return typescript.config([
+  return defineConfig([
     eslint.configs.recommended,
     typescript.configs.strictTypeChecked,
     typescript.configs.stylisticTypeChecked,
@@ -28,27 +29,13 @@ export function createEslintConfigBrowserTypescriptReact() {
     react.configs.flat['jsx-runtime'],
     hooks.configs['recommended-latest'],
     a11y.flatConfigs.strict,
-    {
-      rules: {
-        '@typescript-eslint/consistent-type-exports': 'error',
-        '@typescript-eslint/consistent-type-imports': 'error',
-      },
-    },
+    sonarjs.configs.recommended,
+    prettier,
     {
       languageOptions: {
         parserOptions: {
           projectService: true,
-          tsconfigRootDir: import.meta.dirname,
         },
-      },
-    },
-    {
-      files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'],
-      extends: [typescript.configs.disableTypeChecked],
-    },
-    {
-      languageOptions: {
-        globals: { ...globals.browser, ...globals.es2020 },
       },
     },
     {
@@ -58,6 +45,5 @@ export function createEslintConfigBrowserTypescriptReact() {
         },
       },
     },
-    prettier,
   ]);
 }

@@ -13,17 +13,25 @@
 
 import eslint from '@eslint/js';
 import prettier from 'eslint-config-prettier/flat';
+import sonarjs from 'eslint-plugin-sonarjs';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import typescript from 'typescript-eslint';
 
 export function createEslintConfigNode() {
-  return typescript.config([
+  return defineConfig([
     eslint.configs.recommended,
+    typescript.configs.strict,
+    typescript.configs.stylistic,
+    sonarjs.configs.recommended,
+    prettier,
     {
       languageOptions: {
-        globals: { ...globals.node, ...globals.es2025 },
+        globals: {
+          ...globals.node,
+          ...globals.es2024,
+        },
       },
     },
-    prettier,
   ]);
 }
