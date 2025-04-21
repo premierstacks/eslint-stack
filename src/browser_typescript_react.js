@@ -12,6 +12,7 @@
  */
 
 import eslint from '@eslint/js';
+import stylex from '@stylexjs/eslint-plugin';
 import prettier from 'eslint-config-prettier/flat';
 import a11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
@@ -30,6 +31,18 @@ export function createEslintConfigBrowserTypescriptReact() {
     react.configs.flat['jsx-runtime'],
     hooks.configs['recommended-latest'],
     a11y.flatConfigs.strict,
+    {
+      plugins: {
+        '@stylexjs': stylex,
+      },
+      rules: {
+        '@stylexjs/valid-styles': 'error',
+        '@stylexjs/sort-keys': 'error',
+        '@stylexjs/valid-shorthands': 'error',
+        '@stylexjs/no-unused': 'error',
+        '@stylexjs/no-legacy-media-queries': 'error',
+      },
+    },
     sonarjs.configs.recommended,
     compiler.configs.recommended,
     {

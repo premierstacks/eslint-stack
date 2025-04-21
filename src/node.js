@@ -21,8 +21,8 @@ import typescript from 'typescript-eslint';
 export function createEslintConfigNode() {
   return defineConfig([
     eslint.configs.recommended,
-    typescript.configs.strict,
-    typescript.configs.stylistic,
+    typescript.configs.strictTypeChecked,
+    typescript.configs.stylisticTypeChecked,
     sonarjs.configs.recommended,
     {
       rules: {
