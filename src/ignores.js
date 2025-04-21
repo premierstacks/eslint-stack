@@ -44,3 +44,21 @@ export function createEslintConfigLooseRc() {
     },
   ]);
 }
+
+export function createEslintConfigLooseRoot() {
+  return defineConfig([
+    {
+      extends: [typescript.configs.disableTypeChecked],
+      files: ['*.tsx', '*.mts', '*.ts', '*.cts', '*.jsx', '*.mjs', '*.js', '*.cjs'],
+    },
+    {
+      files: ['*.tsx', '*.mts', '*.ts', '*.cts', '*.jsx', '*.mjs', '*.js', '*.cjs'],
+      languageOptions: {
+        globals: {
+          ...globals.node,
+          ...globals.es2024,
+        },
+      },
+    },
+  ]);
+}

@@ -24,6 +24,13 @@ export function createEslintConfigNode() {
     typescript.configs.strict,
     typescript.configs.stylistic,
     sonarjs.configs.recommended,
+    {
+      rules: {
+        'sonarjs/void-use': 'off',
+
+        'no-restricted-exports': ['error', { restrictDefaultExports: { direct: true, named: true, defaultFrom: true, namedFrom: true, namespaceFrom: true } }],
+      },
+    },
     prettier,
     {
       languageOptions: {
