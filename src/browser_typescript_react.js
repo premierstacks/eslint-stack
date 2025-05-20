@@ -281,7 +281,7 @@ export function createEslintConfigBrowserTypescriptReact() {
             allowTypeStart: true,
           },
         ],
-        '@stylistic/max-len': ['error', { code: 200 }],
+        // '@stylistic/max-len': ['error', { code: 200 }],
         '@stylistic/multiline-comment-style': 'error',
         // '@stylistic/newline-per-chained-call': ['error'],
         '@stylistic/no-confusing-arrow': 'error',

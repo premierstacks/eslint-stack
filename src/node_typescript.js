@@ -160,7 +160,7 @@ export function createEslintConfigNodeTypescript() {
             allowTypeStart: true,
           },
         ],
-        '@stylistic/max-len': ['error', { code: 200 }],
+        // '@stylistic/max-len': ['error', { code: 200 }],
         '@stylistic/multiline-comment-style': 'error',
         // '@stylistic/newline-per-chained-call': ['error'], // stylystic
         '@stylistic/no-confusing-arrow': 'error',
