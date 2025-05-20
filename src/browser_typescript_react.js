@@ -227,7 +227,7 @@ export function createEslintConfigBrowserTypescriptReact() {
         '@stylexjs/sort-keys': 'error',
         '@stylexjs/valid-shorthands': 'error',
         '@stylexjs/no-unused': 'error',
-        '@stylexjs/no-legacy-media-queries': 'error',
+        '@stylexjs/no-legacy-contextual-styles': 'error',
       },
     },
     sonarjs.configs.recommended,
