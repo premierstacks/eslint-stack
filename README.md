@@ -103,7 +103,7 @@ Ensure this package fits your needs and that you agree with the terms.
 Install using npm:
 
 ```bash
-npm install --save-dev github:premierstacks/eslint-stack#semver:^2.0
+npm install --save-dev github:premierstacks/eslint-stack#main
 ```
 
 **3. Select a template**
