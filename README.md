@@ -74,6 +74,7 @@ Here are the available module exports:
 import {
   createEslintConfigBrowserTypescript,
   createEslintConfigBrowserTypescriptReact,
+  createEslintConfigBrowserTypescriptReactStrict,
   createEslintConfigIgnores,
   createEslintConfigIgnoresRc,
   createEslintConfigIgnoresRoot,
@@ -88,6 +89,7 @@ import {
 Explore the predefined templates for various configurations in the [/templates](/templates) directory. These templates provide quick-start setups for different environments.
 
 **[/templates/browser_typescript_react.template](/templates/browser_typescript_react.template)**<br />
+**[/templates/browser_typescript_react_strict.template](/templates/browser_typescript_react_strict.template)**<br />
 **[/templates/browser_typescript.template](/templates/browser_typescript.template)**<br />
 **[/templates/node_typescript.template](/templates/node_typescript.template)**<br />
 **[/templates/node.template](/templates/node.template)**<br />
@@ -114,6 +116,8 @@ Use the `cp` command to copy it into your project as `/eslint.config.js`:
 
 ```bash
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react.template ./eslint.config.js
+# or
+cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react_strict.template ./eslint.config.js
 # or
 cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript.template ./eslint.config.js
 #or

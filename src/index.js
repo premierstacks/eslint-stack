@@ -13,6 +13,7 @@
 
 export * from './browser_typescript.js';
 export * from './browser_typescript_react.js';
+export * from './browser_typescript_react_strict.js';
 export * from './ignores.js';
 export * from './node.js';
 export * from './node_typescript.js';
