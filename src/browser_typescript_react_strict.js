@@ -227,162 +227,630 @@ export function createEslintConfigBrowserTypescriptReactStrict() {
           'error',
           {
             propLimits: {
-              all: { limit: null },
-              animation: { limit: null },
-              animationRange: { limit: null },
-              background: { limit: null },
-              backgroundPosition: { limit: null },
-              blockSize: { limit: null },
-              border: { limit: null },
-              borderBlock: { limit: null },
-              borderBlockColor: { limit: null },
-              borderBlockEnd: { limit: null },
-              borderBlockEndColor: { limit: null },
-              borderBlockEndStyle: { limit: null },
-              borderBlockEndWidth: { limit: null },
-              borderBlockStart: { limit: null },
-              borderBlockStartColor: { limit: null },
-              borderBlockStartStyle: { limit: null },
-              borderBlockStartWidth: { limit: null },
-              borderBlockStyle: { limit: null },
-              borderBlockWidth: { limit: null },
-              borderBottom: { limit: null },
-              borderBottomEndRadius: { limit: null },
-              borderBottomStartRadius: { limit: null },
-              borderColor: { limit: null },
-              borderEnd: { limit: null },
-              borderEndColor: { limit: null },
-              borderEndEndRadius: { limit: null },
-              borderEndStartRadius: { limit: null },
-              borderEndStyle: { limit: null },
-              borderEndWidth: { limit: null },
-              borderHorizontal: { limit: null },
-              borderHorizontalColor: { limit: null },
-              borderHorizontalStyle: { limit: null },
-              borderHorizontalWidth: { limit: null },
-              borderImage: { limit: null },
-              borderInline: { limit: null },
-              borderInlineColor: { limit: null },
-              borderInlineEnd: { limit: null },
-              borderInlineEndColor: { limit: null },
-              borderInlineEndStyle: { limit: null },
-              borderInlineEndWidth: { limit: null },
-              borderInlineStart: { limit: null },
-              borderInlineStartColor: { limit: null },
-              borderInlineStartStyle: { limit: null },
-              borderInlineStartWidth: { limit: null },
-              borderInlineStyle: { limit: null },
-              borderInlineWidth: { limit: null },
-              borderLeft: { limit: null },
-              borderRadius: { limit: null },
-              borderRight: { limit: null },
-              borderStart: { limit: null },
-              borderStartColor: { limit: null },
-              borderStartEndRadius: { limit: null },
-              borderStartStartRadius: { limit: null },
-              borderStartStyle: { limit: null },
-              borderStartWidth: { limit: null },
-              borderStyle: { limit: null },
-              borderTop: { limit: null },
-              borderTopEndRadius: { limit: null },
-              borderTopStartRadius: { limit: null },
-              borderVertical: { limit: null },
-              borderVerticalColor: { limit: null },
-              borderVerticalStyle: { limit: null },
-              borderVerticalWidth: { limit: null },
-              borderWidth: { limit: null },
-              columnRule: { limit: null },
-              columns: { limit: null },
-              containIntrinsicBlockSize: { limit: null },
-              containIntrinsicInlineSize: { limit: null },
-              containIntrinsicSize: { limit: null },
-              container: { limit: null },
-              end: { limit: null },
-              flex: { limit: null },
-              flexFlow: { limit: null },
-              font: { limit: null },
-              fontSynthesis: { limit: null },
-              fontVariant: { limit: null },
-              gap: { limit: null },
-              grid: { limit: null },
-              gridArea: { limit: null },
-              gridColumn: { limit: null },
-              gridColumnGap: { limit: null },
-              gridGap: { limit: null },
-              gridRow: { limit: null },
-              gridRowGap: { limit: null },
-              gridTemplate: { limit: null },
-              inlineSize: { limit: null },
-              inset: { limit: null },
-              insetBlock: { limit: null },
-              insetBlockEnd: { limit: null },
-              insetBlockStart: { limit: null },
-              insetInline: { limit: null },
-              insetInlineEnd: { limit: null },
-              insetInlineStart: { limit: null },
-              listStyle: { limit: null },
-              margin: { limit: null },
-              marginBlock: { limit: null },
-              marginBlockEnd: { limit: null },
-              marginBlockStart: { limit: null },
-              marginEnd: { limit: null },
-              marginHorizontal: { limit: null },
-              marginInline: { limit: null },
-              marginInlineEnd: { limit: null },
-              marginInlineStart: { limit: null },
-              marginStart: { limit: null },
-              marginVertical: { limit: null },
-              mask: { limit: null },
-              maskBorder: { limit: null },
-              maxBlockSize: { limit: null },
-              maxInlineSize: { limit: null },
-              minBlockSize: { limit: null },
-              minInlineSize: { limit: null },
-              offset: { limit: null },
-              outline: { limit: null },
-              overflow: { limit: null },
-              overflowBlock: { limit: null },
-              overflowInline: { limit: null },
-              overscrollBehavior: { limit: null },
-              overscrollBehaviorBlock: { limit: null },
-              overscrollBehaviorInline: { limit: null },
-              padding: { limit: null },
-              paddingBlock: { limit: null },
-              paddingBlockEnd: { limit: null },
-              paddingBlockStart: { limit: null },
-              paddingEnd: { limit: null },
-              paddingHorizontal: { limit: null },
-              paddingInline: { limit: null },
-              paddingInlineEnd: { limit: null },
-              paddingInlineStart: { limit: null },
-              paddingStart: { limit: null },
-              paddingVertical: { limit: null },
-              placeContent: { limit: null },
-              placeItems: { limit: null },
-              placeSelf: { limit: null },
-              scrollMargin: { limit: null },
-              scrollMarginBlock: { limit: null },
-              scrollMarginBlockEnd: { limit: null },
-              scrollMarginBlockStart: { limit: null },
-              scrollMarginInline: { limit: null },
-              scrollMarginInlineEnd: { limit: null },
-              scrollMarginInlineStart: { limit: null },
-              scrollPadding: { limit: null },
-              scrollPaddingBlock: { limit: null },
-              scrollPaddingBlockEnd: { limit: null },
-              scrollPaddingBlockStart: { limit: null },
-              scrollPaddingInline: { limit: null },
-              scrollPaddingInlineEnd: { limit: null },
-              scrollPaddingInlineStart: { limit: null },
-              scrollSnapType: { limit: null },
-              scrollTimeline: { limit: null },
-              start: { limit: null },
-              textBox: { limit: null },
-              textDecoration: { limit: null },
-              textEmphasis: { limit: null },
-              textWrap: { limit: null },
-              transition: { limit: null },
-              viewTimeline: { limit: null },
+              all: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              animation: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              animationRange: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              background: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              backgroundPosition: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              blockSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              border: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockEndColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockEndStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockEndWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockStartColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockStartStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockStartWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBlockWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBottom: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBottomEndRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderBottomStartRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderEndColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderEndEndRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderEndStartRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderEndStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderEndWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderHorizontal: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderHorizontalColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderHorizontalStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderHorizontalWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderImage: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineEndColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineEndStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineEndWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineStartColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineStartStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineStartWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderInlineWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderLeft: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderRight: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderStartColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderStartEndRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderStartStartRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderStartStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderStartWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderTop: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderTopEndRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderTopStartRadius: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderVertical: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderVerticalColor: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderVerticalStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderVerticalWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              borderWidth: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              columnRule: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              columns: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              containIntrinsicBlockSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              containIntrinsicInlineSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              containIntrinsicSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              container: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              end: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              flex: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              flexFlow: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              font: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              fontSynthesis: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              fontVariant: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gap: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              grid: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gridArea: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gridColumn: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gridColumnGap: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gridGap: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gridRow: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gridRowGap: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              gridTemplate: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              inlineSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              inset: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              insetBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              insetBlockEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              insetBlockStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              insetInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              insetInlineEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              insetInlineStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              listStyle: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              margin: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginBlockEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginBlockStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginHorizontal: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginInlineEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginInlineStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              marginVertical: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              mask: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              maskBorder: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              maxBlockSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              maxInlineSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              minBlockSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              minInlineSize: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              offset: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              outline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              overflow: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              overflowBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              overflowInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              overscrollBehavior: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              overscrollBehaviorBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              overscrollBehaviorInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              padding: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingBlockEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingBlockStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingHorizontal: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingInlineEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingInlineStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              paddingVertical: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              placeContent: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              placeItems: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              placeSelf: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollMargin: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollMarginBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollMarginBlockEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollMarginBlockStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollMarginInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollMarginInlineEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollMarginInlineStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollPadding: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollPaddingBlock: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollPaddingBlockEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollPaddingBlockStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollPaddingInline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollPaddingInlineEnd: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollPaddingInlineStart: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollSnapType: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              scrollTimeline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              start: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              textBox: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              textDecoration: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              textEmphasis: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              textWrap: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              transition: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
+              viewTimeline: {
+                limit: null,
+                reason: 'Only longhand properties are allowed.',
+              },
             },
           },
         ],
