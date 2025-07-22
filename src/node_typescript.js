@@ -137,7 +137,6 @@ export function createEslintConfigNodeTypescript() {
           },
         ],
         '@stylistic/curly-newline': ['error', 'always'],
-        '@stylistic/func-call-spacing': 'error',
         '@stylistic/function-call-argument-newline': ['error', 'consistent'],
         '@stylistic/function-call-spacing': 'error',
         '@stylistic/function-paren-newline': ['error', 'consistent'],
