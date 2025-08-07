@@ -1,4 +1,4 @@
-import { defineConfig } from 'eslint/config';
-import { createEslintConfigIgnoresRoot, createEslintConfigIgnores, createEslintConfigNodeTypescript } from '@premierstacks/eslint-stack';
+import { EslintStack } from '@premierstacks/eslint-stack';
 
-export default defineConfig([createEslintConfigIgnores(), createEslintConfigNodeTypescript(), createEslintConfigIgnoresRoot()]);
+// eslint-disable-next-line no-restricted-exports
+export default EslintStack.Presets.nodeTypescript().build();

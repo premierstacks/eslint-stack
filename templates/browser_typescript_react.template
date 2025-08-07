@@ -1,4 +1,4 @@
-import { defineConfig } from 'eslint/config';
-import { createEslintConfigBrowserTypescriptReact, createEslintConfigIgnoresRoot, createEslintConfigIgnores } from '@premierstacks/eslint-stack';
+import { EslintStack } from '@premierstacks/eslint-stack';
 
-export default defineConfig([createEslintConfigIgnores(), createEslintConfigBrowserTypescriptReact(), createEslintConfigIgnoresRoot()]);
+// eslint-disable-next-line no-restricted-exports
+export default EslintStack.Presets.browserTypescriptReact().build();

@@ -69,17 +69,7 @@ By protecting the core quality and unity of Premierstacks, this license ensures 
 Here are the available module exports:
 
 ```js
-import {
-  createEslintConfigBrowserTypescript,
-  createEslintConfigBrowserTypescriptReact,
-  createEslintConfigBrowserTypescriptReactStrict,
-  createEslintConfigIgnores,
-  createEslintConfigIgnoresRc,
-  createEslintConfigIgnoresRoot,
-  createEslintConfigLooseRc,
-  createEslintConfigNode,
-  createEslintConfigNodeTypescript,
-} from '@premierstacks/eslint-stack';
+import { EslintStack } from '@premierstacks/eslint-stack';
 ```
 
 ## Templates

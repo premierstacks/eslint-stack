@@ -1,4 +1,0 @@
-import { defineConfig } from 'eslint/config';
-import { createEslintConfigBrowserTypescriptReactStrict, createEslintConfigIgnoresRoot, createEslintConfigIgnores } from '@premierstacks/eslint-stack';
-
-export default defineConfig([createEslintConfigIgnores(), createEslintConfigBrowserTypescriptReactStrict(), createEslintConfigIgnoresRoot()]);
