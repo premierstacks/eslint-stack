@@ -27,6 +27,8 @@ export function withSonarjs(config, options = {}, override = {}) {
           rules: {
             'sonarjs/void-use': 'off',
             'sonarjs/cognitive-complexity': 'off',
+            'sonarjs/function-return-type': 'off',
+            'sonarjs/no-nested-conditional': 'off',
           },
         },
       ],
