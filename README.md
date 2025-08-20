@@ -76,11 +76,11 @@ import { EslintStack } from '@premierstacks/eslint-stack';
 
 Explore the predefined templates for various configurations in the [/templates](/templates) directory. These templates provide quick-start setups for different environments.
 
-**[/templates/browser_typescript_react.template](/templates/browser_typescript_react.template)**<br />
-**[/templates/browser_typescript_react_strict.template](/templates/browser_typescript_react_strict.template)**<br />
-**[/templates/browser_typescript.template](/templates/browser_typescript.template)**<br />
-**[/templates/node_typescript.template](/templates/node_typescript.template)**<br />
-**[/templates/node.template](/templates/node.template)**<br />
+**[/templates/browser_typescript_react.js](/templates/browser_typescript_react.js)**<br />
+**[/templates/browser_typescript_react_strict.js](/templates/browser_typescript_react_strict.js)**<br />
+**[/templates/browser_typescript.js](/templates/browser_typescript.js)**<br />
+**[/templates/node_typescript.js](/templates/node_typescript.js)**<br />
+**[/templates/node.js](/templates/node.js)**<br />
 
 ## Getting Started
 
@@ -103,15 +103,15 @@ Choose one of the predefined configuration templates from the [/templates](/temp
 Use the `cp` command to copy it into your project as `/eslint.config.js`:
 
 ```bash
-cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react.template ./eslint.config.js
+cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react.js ./eslint.config.js
 # or
-cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react_strict.template ./eslint.config.js
+cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript_react_strict.js ./eslint.config.js
 # or
-cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript.template ./eslint.config.js
+cp ./node_modules/@premierstacks/eslint-stack/templates/browser_typescript.js ./eslint.config.js
 #or
-cp ./node_modules/@premierstacks/eslint-stack/templates/node_typescript.template ./eslint.config.js
+cp ./node_modules/@premierstacks/eslint-stack/templates/node_typescript.js ./eslint.config.js
 #or
-cp ./node_modules/@premierstacks/eslint-stack/templates/node.template ./eslint.config.js
+cp ./node_modules/@premierstacks/eslint-stack/templates/node.js ./eslint.config.js
 ```
 
 **4. CLI**

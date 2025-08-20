@@ -11,7 +11,18 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
+import globals from 'globals';
 import { EslintStack } from './src/index.js';
 
 // eslint-disable-next-line no-restricted-exports
-export default EslintStack.Presets.node().build();
+export default EslintStack.create()
+  .base()
+  .globals({
+    ...globals.node,
+    ...globals.es2024,
+  })
+  .ignores(EslintStack.Selectors.GlobalIgnore)
+  .recommended()
+  .stylistic()
+  .sonarjs()
+  .build();

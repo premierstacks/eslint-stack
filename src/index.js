@@ -11,11 +11,5 @@
  * @see {@link https://github.com/sponsors/tomchochola} GitHub Sponsors
  */
 
-export * from './base.js';
-export * from './builder.js';
-export * from './quality.js';
-export * from './react.js';
+export * from './EslintStack.js';
 export * as EslintStackSelectors from './selectors.js';
-export * from './stylistic.js';
-export * from './typescript.js';
-export * as EslintStackPresets from './presets.js';
